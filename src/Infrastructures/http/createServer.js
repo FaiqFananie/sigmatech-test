@@ -4,6 +4,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
+const routes = require('../../Interfaces/routes/route')
 
 const createServer = () => {
   const app = express()
@@ -14,10 +15,7 @@ const createServer = () => {
   app.use(express.urlencoded({ limit: '5mb', extended: true }))
   app.use(cookieParser())
 
-  /**
-  * Routes.
-  */
-  // routes(app);
+  routes(app)
 
   return app
 }
