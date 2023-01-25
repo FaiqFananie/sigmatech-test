@@ -12,5 +12,6 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "n/no-path-concat": "off"
     }
 }
