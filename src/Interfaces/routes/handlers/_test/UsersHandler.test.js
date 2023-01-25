@@ -1,11 +1,12 @@
 const createServer = require('../../../../Infrastructures/http/createServer')
 const UsersTableTestHelper = require('../../../../tests/UsersTableTestHelper')
 const test = require('supertest')
+const container = require('../../../../Infrastructures/container')
 
 describe('/users endpoint', () => {
   let server
   beforeAll(async () => {
-    server = createServer()
+    server = createServer(container)
   })
 
   afterEach(async () => {

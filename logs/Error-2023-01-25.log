@@ -63,3 +63,5 @@ SyntaxError: Missing } in template expression
 { "date": "2023-01-25 23:28:59.517", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
 { "date": "2023-01-25 23:28:59.581", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
 { "date": "2023-01-25 23:28:59.652", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-25 23:53:06.297", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-25 23:56:10.863", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }

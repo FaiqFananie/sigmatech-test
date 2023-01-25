@@ -10,7 +10,7 @@ const Middleware = require('../../Interfaces/routes/handlers/Middleware')
 
 const middleware = new Middleware(winston)
 
-const createServer = () => {
+const createServer = (container) => {
   const app = express()
   app.use(bodyParser.json({ limit: '5mb', type: 'application/json' }))
   app.use(bodyParser.urlencoded({ limit: '5mb', extended: true }))
@@ -28,7 +28,7 @@ const createServer = () => {
     '"response_time": ":response-time ms" }',
     { stream: winston.stream }))
 
-  routes(app)
+  routes(app, container)
   app.use(middleware.responseError)
 
   return app

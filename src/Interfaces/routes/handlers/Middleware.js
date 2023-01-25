@@ -1,5 +1,3 @@
-/* istanbul ignore file */
-
 const ClientError = require('../../../Commons/exceptions/ClientError')
 const DomainErrorTranslator = require('../../../Commons/exceptions/DomainErrorTranslator')
 
@@ -24,7 +22,7 @@ class Middleware {
       }
 
       if (!translatedError.isServer) {
-        next(error)
+        return res
       } else {
         this._logger.error(`{ "url": "${req.originalUrl}", "code": 500, "method": "${req.method}", "ip": "${req.ip}", "message": "terjadi kegagalan pada server kami"}`)
         res.status(500)
@@ -32,6 +30,7 @@ class Middleware {
           status: 'fail',
           message: 'terjadi kegagalan pada server kami'
         })
+        return res
       }
     }
   }

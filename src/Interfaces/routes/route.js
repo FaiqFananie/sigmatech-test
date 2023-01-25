@@ -1,9 +1,8 @@
-const container = require('../../Infrastructures/container')
 const UsersHandler = require('./handlers/UsersHandler')
 
-const usersHandler = new UsersHandler(container)
+const routes = (app, container) => {
+  const usersHandler = new UsersHandler(container)
 
-const routes = (app) => {
   app.get('/', (_, res) => {
     res.json('hello world')
   })
