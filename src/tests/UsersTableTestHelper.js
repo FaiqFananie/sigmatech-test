@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-const User = require('../../models/User')
+const User = require('../../models/user')
 
 const UsersTableTestHelper = {
   async addUser ({

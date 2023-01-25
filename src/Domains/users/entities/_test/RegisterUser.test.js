@@ -29,8 +29,8 @@ describe('a RegisterUser entities', () => {
   it('should throw error when username contains more than 50 character', () => {
     // Arrange
     const payload = {
-      username: 'dicodingindonesiadicodingindonesiadicodingindonesiadicoding',
-      fullname: 'Dicoding Indonesia',
+      username: 'faiqfananiefasadjascldnvldnpasnflvnlczncpadnpsancdspvnpfsnfvpsnvp',
+      fullname: 'Faiq Fananie',
       password: 'abc',
       role: 'pelayan'
     }
@@ -42,8 +42,8 @@ describe('a RegisterUser entities', () => {
   it('should throw error when username contains restricted character', () => {
     // Arrange
     const payload = {
-      username: 'dico ding',
-      fullname: 'dicoding',
+      username: 'fa iqfananie',
+      fullname: 'faiqfananie',
       password: 'abc',
       role: 'pelayan'
     }
@@ -55,8 +55,8 @@ describe('a RegisterUser entities', () => {
   it('should make role to lowercase', () => {
     // Arrange
     const payload = {
-      username: 'dicoding',
-      fullname: 'Dicoding Indonesia',
+      username: 'faiqfananie',
+      fullname: 'Faiq Fananie',
       password: 'abc',
       role: 'PELAYAN'
     }
@@ -74,8 +74,8 @@ describe('a RegisterUser entities', () => {
   it('should create registerUser object correctly', () => {
     // Arrange
     const payload = {
-      username: 'dicoding',
-      fullname: 'Dicoding Indonesia',
+      username: 'faiqfananie',
+      fullname: 'Faiq Fananie',
       password: 'abc',
       role: 'pelayan'
     }

@@ -1,7 +1,7 @@
 const UsersTableTestHelper = require('../../../tests/UsersTableTestHelper')
 const InvariantError = require('../../../Commons/exceptions/InvariantError')
 const RegisterUser = require('../../../Domains/users/entities/RegisterUser')
-const User = require('../../../../models/User')
+const User = require('../../../../models/user')
 const UserRepositoryPostgres = require('../UserRepositoryPostgres')
 
 describe('UserRepositoryPostgres', () => {
@@ -12,11 +12,11 @@ describe('UserRepositoryPostgres', () => {
   describe('verifyAvailableUsername function', () => {
     it('should throw InvariantError when username already used', async () => {
       // Arrange
-      await UsersTableTestHelper.addUser({ username: 'dicoding' }) // memasukan user baru dengan username dicoding
+      await UsersTableTestHelper.addUser({ username: 'faiq' })
       const userRepositoryPostgres = new UserRepositoryPostgres(User, {})
 
       // Action & Assert
-      await expect(userRepositoryPostgres.verifyAvailableUsername('dicoding')).rejects.toThrowError(InvariantError)
+      await expect(userRepositoryPostgres.verifyAvailableUsername('faiq')).rejects.toThrowError(InvariantError)
     })
 
     it('should not throw InvariantError when username available', async () => {
@@ -24,7 +24,7 @@ describe('UserRepositoryPostgres', () => {
       const userRepositoryPostgres = new UserRepositoryPostgres(User, {})
 
       // Action & Assert
-      await expect(userRepositoryPostgres.verifyAvailableUsername('dicoding')).resolves.not.toThrowError(InvariantError)
+      await expect(userRepositoryPostgres.verifyAvailableUsername('faiq')).resolves.not.toThrowError(InvariantError)
     })
   })
 
@@ -32,9 +32,9 @@ describe('UserRepositoryPostgres', () => {
     it('should persist register user and return registered user correctly', async () => {
       // Arrange
       const registerUser = new RegisterUser({
-        username: 'dicoding',
+        username: 'faiqfananie',
         password: 'secret_password',
-        fullname: 'Dicoding Indonesia',
+        fullname: 'Faiq Fananie',
         role: 'pelayan'
       })
       const fakeIdGenerator = () => '123' // stub!
