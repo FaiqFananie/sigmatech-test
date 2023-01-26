@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize')
 const sequelize = require('../src/Infrastructures/database/postgres')
 
-const User = sequelize.define('user', {
+const User = sequelize.define('users', {
   fullname: {
     type: DataTypes.STRING,
     allowNull: false

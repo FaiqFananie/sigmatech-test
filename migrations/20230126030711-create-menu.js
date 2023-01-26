@@ -5,9 +5,8 @@ module.exports = {
     await queryInterface.createTable('menus', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       name: {
         allowNull: false,
@@ -23,7 +22,10 @@ module.exports = {
       },
       price: {
         allowNull: false,
-        type: Sequelize.NUMBER
+        type: Sequelize.INTEGER
+      },
+      deletedAt: {
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -35,7 +37,8 @@ module.exports = {
       }
     })
   },
+
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('Menus')
+    await queryInterface.dropTable('menus')
   }
 }

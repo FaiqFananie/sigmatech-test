@@ -17,6 +17,10 @@ const AddUserUseCase = require('../Applications/use_case/AddUserUseCase')
 const LoginUserUseCase = require('../Applications/use_case/LoginUserUseCase')
 const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAuthenticationUseCase')
 const LogoutUserUseCase = require('../Applications/use_case/LogoutUserUseCase')
+const MenuRepository = require('../Domains/menus/MenuRepository')
+const MenuRepositoryPostgres = require('./repository/MenuRepositoryPostgres')
+const Menu = require('../../models/menu')
+const AddMenuUseCase = require('../Applications/use_case/AddMenuUseCase')
 
 // creating container
 const container = createContainer()
@@ -44,6 +48,20 @@ container.register([
       dependencies: [
         {
           concrete: Authentication
+        }
+      ]
+    }
+  },
+  {
+    key: MenuRepository.name,
+    Class: MenuRepositoryPostgres,
+    parameter: {
+      dependencies: [
+        {
+          concrete: Menu
+        },
+        {
+          concrete: nanoid
         }
       ]
     }
@@ -142,6 +160,19 @@ container.register([
         {
           name: 'authenticationRepository',
           internal: AuthenticationRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: AddMenuUseCase.name,
+    Class: AddMenuUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
         }
       ]
     }
