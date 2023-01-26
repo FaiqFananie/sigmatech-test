@@ -7,7 +7,7 @@ describe('Menu Repository', () => {
 
     // Assert
     await expect(menuRepository.addMenu('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
-    await expect(menuRepository.updateMenu('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
+    await expect(menuRepository.editMenu('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
     await expect(menuRepository.verifyAvailableMenu('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
     await expect(menuRepository.getMenuById('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
     await expect(menuRepository.getMenus('')).rejects.toThrowError('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')

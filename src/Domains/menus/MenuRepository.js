@@ -3,7 +3,7 @@ class MenuRepository {
     throw new Error('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
   }
 
-  async updateMenu () {
+  async editMenu () {
     throw new Error('MENU_REPOSITORY.METHOD_NOT_IMPLEMENTED')
   }
 
