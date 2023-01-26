@@ -1,3 +1,4 @@
+const AuthenticationError = require('../../Commons/exceptions/AuthenticationError')
 const InvariantError = require('../../Commons/exceptions/InvariantError')
 // const RegisteredUser = require('../../Domains/users/entities/RegisteredUser')
 const UserRepository = require('../../Domains/users/UserRepository')
@@ -49,6 +50,14 @@ class UserRepositoryPostgres extends UserRepository {
     }
 
     return user.id
+  }
+
+  async checkIdAuth (id) {
+    const user = await this._user.findOne({ where: { id } })
+
+    if (!user) {
+      throw new AuthenticationError('Authentication Error')
+    }
   }
 }
 

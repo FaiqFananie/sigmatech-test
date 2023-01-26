@@ -1,11 +1,14 @@
+const CheckAuthenticationUseCase = require('../../../Applications/use_case/CheckAuthenticationUseCase')
 const ClientError = require('../../../Commons/exceptions/ClientError')
 const DomainErrorTranslator = require('../../../Commons/exceptions/DomainErrorTranslator')
 
 class Middleware {
-  constructor (logger) {
+  constructor (logger, container) {
     this._logger = logger
+    this._container = container
 
     this.responseError = this.responseError.bind(this)
+    this.checkAuth = this.checkAuth.bind(this)
   }
 
   async responseError (error, req, res, next) {
@@ -28,6 +31,16 @@ class Middleware {
       message: 'terjadi kegagalan pada server kami'
     })
     return res
+  }
+
+  async checkAuth (req, res, next) {
+    try {
+      const checkAuthentication = this._container.getInstance(CheckAuthenticationUseCase.name)
+      await checkAuthentication.execute(req.headers.authorization.split(' ')[1])
+      next()
+    } catch (err) {
+      next(err)
+    }
   }
 }
 

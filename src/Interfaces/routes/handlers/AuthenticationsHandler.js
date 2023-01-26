@@ -29,7 +29,6 @@ class AuthenticationsHandler {
 
   async putAuthenticationHandler (req, res, next) {
     try {
-      console.log(req.body)
       const refreshAuthenticationUseCase = this._container
         .getInstance(RefreshAuthenticationUseCase.name)
       const accessToken = await refreshAuthenticationUseCase.execute(req.body)

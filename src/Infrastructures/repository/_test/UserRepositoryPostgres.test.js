@@ -3,6 +3,7 @@ const InvariantError = require('../../../Commons/exceptions/InvariantError')
 const RegisterUser = require('../../../Domains/users/entities/RegisterUser')
 const User = require('../../../../models/user')
 const UserRepositoryPostgres = require('../UserRepositoryPostgres')
+const AuthenticationError = require('../../../Commons/exceptions/AuthenticationError')
 
 describe('UserRepositoryPostgres', () => {
   afterEach(async () => {
@@ -95,6 +96,29 @@ describe('UserRepositoryPostgres', () => {
 
       // Assert
       expect(userId).toEqual('user-321')
+    })
+  })
+
+  describe('chechIdAuth', () => {
+    it('should throw AuthenticationError when user not found', async () => {
+      // Arrange
+      const userRepositoryPostgres = new UserRepositoryPostgres(User, {})
+
+      // Action & Assert
+      await expect(userRepositoryPostgres.checkIdAuth('user-999'))
+        .rejects
+        .toThrowError(AuthenticationError)
+    })
+
+    it('should not throw Authentication Error when user valid', async () => {
+      // Arrange
+      await UsersTableTestHelper.addUser({ id: 'user-321', username: 'faiqfananie' })
+      const userRepositoryPostgres = new UserRepositoryPostgres(User, {})
+
+      // Action & Assert
+      await expect(userRepositoryPostgres.checkIdAuth('user-321'))
+        .resolves
+        .not.toThrow(AuthenticationError)
     })
   })
 })

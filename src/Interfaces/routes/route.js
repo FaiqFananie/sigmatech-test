@@ -2,7 +2,7 @@ const UsersHandler = require('./handlers/UsersHandler')
 const AuthenticationsHandler = require('./handlers/AuthenticationsHandler')
 const MenusHandler = require('./handlers/Menushandler')
 
-const routes = (app, container) => {
+const routes = (app, container, middleware) => {
   const usersHandler = new UsersHandler(container)
   const authenticationsHandler = new AuthenticationsHandler(container)
   const menusHandler = new MenusHandler(container)
@@ -20,7 +20,7 @@ const routes = (app, container) => {
   app.delete('/logout', authenticationsHandler.deleteAuthenticationHandler)
 
   // Menu
-  app.post('/menus', menusHandler.postMenuHandler)
+  app.post('/menus', middleware.checkAuth, menusHandler.postMenuHandler)
 }
 
 module.exports = routes

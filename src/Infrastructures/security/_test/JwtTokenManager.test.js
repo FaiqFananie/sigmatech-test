@@ -1,4 +1,5 @@
 const Jwt = require('@hapi/jwt')
+const AuthenticationError = require('../../../Commons/exceptions/AuthenticationError')
 const InvariantError = require('../../../Commons/exceptions/InvariantError')
 const JwtTokenManager = require('../JwtTokenManager')
 
@@ -64,6 +65,30 @@ describe('JwtTokenManager', () => {
       await expect(jwtTokenManager.verifyRefreshToken(refreshToken))
         .resolves
         .not.toThrow(InvariantError)
+    })
+  })
+
+  describe('verifyAccessToken function', () => {
+    it('should throw Authentication when verification failed', async () => {
+      // Arrange
+      const jwtTokenManager = new JwtTokenManager(Jwt.token)
+      const accessToken = await jwtTokenManager.createRefreshToken({ username: 'faiqfananie' })
+
+      // Action & Assert
+      await expect(jwtTokenManager.verifyAccessToken(accessToken))
+        .rejects
+        .toThrow(AuthenticationError)
+    })
+
+    it('should not throw InvariantError when access token verified', async () => {
+      // Arrange
+      const jwtTokenManager = new JwtTokenManager(Jwt.token)
+      const refreshToken = await jwtTokenManager.createAccessToken({ username: 'faiqfananie' })
+
+      // Action & Assert
+      await expect(jwtTokenManager.verifyAccessToken(refreshToken))
+        .resolves
+        .not.toThrow(AuthenticationError)
     })
   })
 

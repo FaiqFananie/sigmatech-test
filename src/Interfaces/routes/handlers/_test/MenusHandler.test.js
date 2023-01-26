@@ -1,12 +1,27 @@
 const container = require('../../../../Infrastructures/container')
 const createServer = require('../../../../Infrastructures/http/createServer')
 const MenusTableTestHelper = require('../../../../tests/MenusTableTestHelper')
+
 const test = require('supertest')
 
 describe('/menus endpoint', () => {
   let server
+  let accessToken
   beforeAll(async () => {
     server = createServer(container)
+    await test(server).post('/users').send({
+      username: 'faiqfananie2',
+      password: 'secret2',
+      fullname: 'Faiq Fananie',
+      role: 'pelayan'
+    })
+
+    const loginResponse = await test(server).post('/login').send({
+      username: 'faiqfananie2',
+      password: 'secret2'
+    })
+
+    accessToken = loginResponse.body.data.accessToken
   })
 
   afterEach(async () => {
@@ -24,7 +39,7 @@ describe('/menus endpoint', () => {
       }
 
       // Action
-      const response = await test(server).post('/menus').send(requestPayload)
+      const response = await test(server).post('/menus').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
 
       // Assert
       expect(response.status).toEqual(201)
@@ -40,7 +55,7 @@ describe('/menus endpoint', () => {
       }
 
       // Action
-      const response = await test(server).post('/menus').send(requestPayload)
+      const response = await test(server).post('/menus').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
 
       // Assert
       expect(response.status).toEqual(400)
@@ -58,7 +73,7 @@ describe('/menus endpoint', () => {
       }
 
       // Action
-      const response = await test(server).post('/menus').send(requestPayload)
+      const response = await test(server).post('/menus').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
 
       // Assert
       expect(response.status).toEqual(400)
