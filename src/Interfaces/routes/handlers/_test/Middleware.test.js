@@ -4,17 +4,28 @@ const container = require('../../../../Infrastructures/container')
 
 describe('Middleware', () => {
   describe('responseError', () => {
-    it('should return status 400 if error is Invariant Error', async () => {
+    it('should return status 400 when error is Not Found Error', async () => {
       // Arrange
-      const requestPayload = {
-        username: 'faiqfananie',
-        password: 'secret',
-        role: 'pelayan'
+      const server = createServer(container)
+
+      // Action
+      const response = await test(server).post('/test')
+
+      // Assert
+      expect(response.statusCode).toEqual(404)
+    })
+
+    it('should return status 400 when error is Invariant Error', async () => {
+      // Arrange
+      const payload = {
+        fullname: 'Faiq Zigo Fananie',
+        username: 'FaiqFananie',
+        password: 'secret'
       }
       const server = createServer(container)
 
       // Action
-      const response = await test(server).post('/users').send(requestPayload)
+      const response = await test(server).post('/users').send(payload)
 
       // Assert
       expect(response.statusCode).toEqual(400)

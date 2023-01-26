@@ -1,5 +1,5 @@
 const createServer = require('./Infrastructures/http/createServer')
-const container = require('../../Infrastructures/container')
+const container = require('../src/Infrastructures/container')
 
 const server = createServer(container)
 

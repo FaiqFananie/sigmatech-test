@@ -30,6 +30,26 @@ class UserRepositoryPostgres extends UserRepository {
 
     return newUser.id
   }
+
+  async getPasswordByUsername (username) {
+    const user = await this._user.findOne({ where: { username } })
+
+    if (!user) {
+      throw new InvariantError('username tidak ditemukan')
+    }
+
+    return user.password
+  }
+
+  async getIdByUsername (username) {
+    const user = await this._user.findOne({ where: { username } })
+
+    if (!user) {
+      throw new InvariantError('user tidak ditemukan')
+    }
+
+    return user.id
+  }
 }
 
 module.exports = UserRepositoryPostgres
