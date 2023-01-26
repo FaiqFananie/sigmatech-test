@@ -6,7 +6,7 @@ let loginResponse
 let server
 describe('Middleware', () => {
   describe('responseError', () => {
-    it('should return status 400 when error is Not Found Error', async () => {
+    it('should return status 404 when error is Not Found Error', async () => {
       // Arrange
       const server = createServer(container)
 
@@ -100,6 +100,22 @@ describe('Middleware', () => {
 
     // Action
     const response = await test(server).post('/menus').send(payload).set('Authorization', `Bearer ${accessToken}`)
+
+    // Assert
+    expect(response.status).toEqual(401)
+  })
+
+  it('should return status 401 if authorization header is empty', async () => {
+    // Arrange
+    const payload = {
+      name: 'Nasi Goreng',
+      type: 'makanan',
+      ready: true,
+      price: 20000
+    }
+
+    // Action
+    const response = await test(server).post('/menus').send(payload)
 
     // Assert
     expect(response.status).toEqual(401)

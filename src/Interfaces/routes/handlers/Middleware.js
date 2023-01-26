@@ -1,6 +1,7 @@
 const CheckAuthenticationUseCase = require('../../../Applications/use_case/CheckAuthenticationUseCase')
 const ClientError = require('../../../Commons/exceptions/ClientError')
 const DomainErrorTranslator = require('../../../Commons/exceptions/DomainErrorTranslator')
+const AccessToken = require('../../../Domains/authentications/entities/AccessToken')
 
 class Middleware {
   constructor (logger, container) {
@@ -35,8 +36,9 @@ class Middleware {
 
   async checkAuth (req, res, next) {
     try {
+      const { token } = new AccessToken(req.headers)
       const checkAuthentication = this._container.getInstance(CheckAuthenticationUseCase.name)
-      await checkAuthentication.execute(req.headers.authorization.split(' ')[1])
+      await checkAuthentication.execute(token)
       next()
     } catch (err) {
       next(err)

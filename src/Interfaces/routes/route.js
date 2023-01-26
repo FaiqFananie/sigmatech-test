@@ -1,6 +1,6 @@
 const UsersHandler = require('./handlers/UsersHandler')
 const AuthenticationsHandler = require('./handlers/AuthenticationsHandler')
-const MenusHandler = require('./handlers/Menushandler')
+const MenusHandler = require('./handlers/MenusHandler')
 
 const routes = (app, container, middleware) => {
   const usersHandler = new UsersHandler(container)
