@@ -4200,3 +4200,663 @@ SyntaxError: Unexpected string
 { "date": "2023-01-26 20:06:55.338", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
 { "date": "2023-01-26 20:06:56.560", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
 { "date": "2023-01-26 20:06:56.588", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:15:37.338", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:15:37.583", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:15:37.632", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:15:37.693", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:15:37.992", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:15:38.067", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:15:38.129", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:15:38.209", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:15:38.360", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:15:38.424", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:15:38.479", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:15:39.395", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:15:39.411", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:15:39.701", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:15:39.710", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:15:40.876", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:15:40.924", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:15:40.964", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:15:41.001", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:15:41.044", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:15:42.166", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:15:42.196", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:17:05.164", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:17:05.401", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:17:05.447", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:17:05.497", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:17:05.882", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:17:05.930", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:17:06.003", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:17:06.068", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:17:06.209", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:17:06.257", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:17:06.313", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:17:08.055", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:08.095", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:17:08.131", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:17:08.166", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:17:08.230", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:17:09.264", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:09.275", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:17:09.529", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:17:09.535", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:17:10.733", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:10.773", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:17:19.437", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:17:19.712", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:17:19.757", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:17:19.803", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:17:20.186", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:17:20.238", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:17:20.302", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:17:20.363", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:17:20.483", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:17:20.549", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:17:20.609", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:17:21.735", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:21.778", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:17:21.821", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:17:21.861", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:17:21.907", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:17:23.005", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:23.034", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:17:23.967", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:17:23.977", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:17:24.225", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:17:24.232", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:18:15.209", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:18:15.437", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:18:15.490", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:18:15.546", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:18:15.855", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:18:15.911", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:18:15.974", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:18:16.037", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:18:16.155", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:18:16.209", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:18:16.270", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:18:17.293", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:18:17.340", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:18:17.392", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:18:17.437", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:18:17.483", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:18:18.429", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:18:18.437", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:18:18.699", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:18:18.706", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:18:19.918", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:18:19.957", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:19:15.438", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:19:15.672", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:19:15.717", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:19:15.780", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:19:16.123", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:19:16.198", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:19:16.260", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:19:16.310", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:19:16.424", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:19:16.499", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:19:16.569", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:32:33.700", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:32:33.950", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:32:34.004", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:32:34.067", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:32:34.376", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:32:34.438", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:32:34.503", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:32:34.569", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:32:34.691", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:32:34.754", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:32:34.821", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:32:35.922", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:32:35.956", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:32:36.717", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:32:36.726", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:32:36.960", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:32:36.976", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:32:37.932", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:32:37.979", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:32:38.029", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:32:38.082", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:32:38.144", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:33:31.212", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:33:31.472", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:33:31.530", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:33:31.606", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:33:31.910", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:33:31.966", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:33:32.015", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:33:32.068", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:33:32.176", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:33:32.218", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:33:32.265", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:33:33.302", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:33.366", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:33:33.424", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:33:33.476", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:33:33.549", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:33:34.848", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:34.877", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:33:35.726", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:35.741", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:33:36.020", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:33:36.027", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:33:47.912", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:33:48.162", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:33:48.220", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:33:48.285", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:33:48.612", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:33:48.672", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:33:48.728", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:33:48.800", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:33:48.947", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:33:49.014", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:33:49.078", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:33:50.321", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:50.364", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:33:50.399", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:33:50.432", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:33:50.474", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:33:51.530", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:51.560", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:33:52.467", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:33:52.477", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:33:52.724", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:33:52.732", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:36:17.925", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:36:54.859", "level": "error", "data": undefined  }
+{ "date": "2023-01-26 20:36:56.415", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:36:56.796", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:36:56.843", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:36:56.903", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:36:57.285", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:36:57.358", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:36:57.407", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:36:57.486", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:36:57.596", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:36:57.643", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:36:57.695", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:36:58.675", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:36:58.710", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:36:58.751", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:36:58.797", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:36:58.858", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:36:59.705", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:36:59.714", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:36:59.944", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:36:59.952", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:37:00.972", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:37:01.022", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:38:22.744", "level": "error", "data": undefined  }
+{ "date": "2023-01-26 20:38:24.150", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:38:24.396", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:38:24.450", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:38:24.518", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:38:24.837", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:38:24.905", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:38:24.972", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:38:25.036", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:38:25.192", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:38:25.261", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:38:25.326", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:38:26.465", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:38:26.506", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:38:26.541", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:38:26.579", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:38:26.642", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:38:27.829", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:38:27.872", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:38:28.850", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:38:28.906", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:38:29.159", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:38:29.167", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:39:08.430", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:39:08.661", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:39:08.728", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:39:08.783", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:39:09.085", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:39:09.141", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:39:09.200", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:39:09.256", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:39:09.389", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:39:09.438", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:39:09.499", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:39:10.482", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:39:10.533", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:39:10.595", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:39:10.637", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:39:10.684", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:39:11.525", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:39:11.539", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:39:11.809", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:39:11.817", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:39:12.782", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:39:12.809", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:39:13.842", "level": "error", "data": undefined  }
+{ "date": "2023-01-26 20:40:03.605", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:40:03.875", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:40:03.930", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:40:03.998", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:40:04.281", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:40:04.333", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:40:04.394", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:40:04.455", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:40:04.583", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:40:04.638", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:40:04.683", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:40:05.732", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:40:05.778", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:40:05.841", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:40:05.902", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:40:05.972", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:40:06.787", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:40:06.804", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:40:07.045", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:40:07.051", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:40:08.091", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:40:08.126", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:40:11.644", "level": "error", "data": undefined  }
+{ "date": "2023-01-26 20:41:32.165", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:41:32.437", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:41:32.496", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:41:32.566", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:41:32.939", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:41:33.004", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:41:33.060", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:41:33.129", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:42:20.940", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:42:21.195", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:42:21.252", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:42:21.313", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:42:21.609", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:42:21.677", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:42:21.741", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:42:21.802", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:42:21.940", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:42:21.994", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:42:22.065", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:42:23.134", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:42:23.182", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:42:23.222", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:42:23.267", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:42:23.317", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:42:24.489", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:42:24.539", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:42:25.326", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:42:25.341", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:42:25.606", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:42:25.615", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:42:28.528", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:43:26.375", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:44:21.739", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:44:21.994", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:44:22.042", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:44:22.104", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:44:22.410", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:44:22.470", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:44:22.539", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:44:22.611", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:44:22.765", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:44:22.846", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:44:22.914", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:44:24.122", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:44:24.172", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:44:25.160", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:44:25.197", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:44:25.235", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:44:25.273", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:44:25.315", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:44:26.212", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:44:26.227", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:44:26.672", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:44:26.700", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:44:29.239", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:44:29.245", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:51:49.018", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:51:49.256", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:51:49.300", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:51:49.360", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:51:49.661", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:51:49.722", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:51:49.786", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:51:49.848", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:51:49.967", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:51:50.019", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:51:50.068", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:51:51.386", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:51:51.399", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:51:51.662", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:51:51.672", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:51:55.712", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:51:55.718", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:52:03.836", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:52:03.854", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:52:04.102", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:52:04.111", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:52:07.969", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:52:07.974", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:52:11.471", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:52:11.527", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:52:11.578", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:52:11.629", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:52:11.714", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:52:18.368", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:52:18.375", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:52:26.002", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:52:26.010", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:52:37.386", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:52:37.391", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:52:41.547", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:52:41.605", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:52:41.646", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 20:52:41.694", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 20:52:41.785", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 20:52:42.591", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:52:42.600", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 20:52:42.846", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:52:42.856", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 20:52:44.036", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 20:52:44.073", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 20:52:45.140", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 20:52:45.370", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 20:52:45.428", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 20:52:45.490", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 20:52:45.792", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:52:45.855", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:52:45.910", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 20:52:45.977", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:52:46.099", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 20:52:46.153", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 20:52:46.203", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 20:56:56.837", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:56:56.845", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:57:22.174", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:57:22.179", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 20:59:10.270", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 20:59:10.277", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:01:33.036", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:01:33.056", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:13:38.355", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:13:38.361", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:13:50.673", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:13:50.687", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:15:19.219", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:15:19.230", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:15:22.930", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:15:22.977", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:15:23.024", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:15:23.067", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:15:23.123", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:15:23.839", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:15:29.138", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:15:29.160", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:15:30.369", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:15:30.411", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:15:31.586", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:15:31.807", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:15:31.857", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:15:31.919", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:15:32.216", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:15:32.263", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:15:32.310", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:15:32.368", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:15:32.473", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:15:32.523", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:15:32.593", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:15:53.413", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:15:58.709", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:15:58.719", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:15:59.832", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:16:00.060", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:16:00.113", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:16:00.176", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:16:00.510", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:16:00.569", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:16:00.633", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:16:00.693", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:16:00.845", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:16:00.913", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:16:00.987", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:16:02.377", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:16:02.407", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:16:03.419", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:16:03.476", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:16:03.556", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:16:03.597", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:16:03.651", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:16:06.805", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:16:06.814", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:19:00.072", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:19:08.479", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada}  }
+{ "date": "2023-01-26 21:19:13.787", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": Authentication Error}  }
+{ "date": "2023-01-26 21:19:13.797", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": Authentication Error}  }
+{ "date": "2023-01-26 21:19:15.032", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": username tidak ditemukan}  }
+{ "date": "2023-01-26 21:19:15.253", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": kredensial yang Anda masukkan salah}  }
+{ "date": "2023-01-26 21:19:15.306", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": harus mengirimkan username dan password}  }
+{ "date": "2023-01-26 21:19:15.361", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": username dan password harus string}  }
+{ "date": "2023-01-26 21:19:15.685", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": harus mengirimkan token refresh}  }
+{ "date": "2023-01-26 21:19:15.747", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": refresh token harus string}  }
+{ "date": "2023-01-26 21:19:15.819", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": refresh token tidak valid}  }
+{ "date": "2023-01-26 21:19:15.898", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": refresh token tidak ditemukan di database}  }
+{ "date": "2023-01-26 21:19:16.064", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": refresh token tidak ditemukan di database}  }
+{ "date": "2023-01-26 21:19:16.134", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": harus mengirimkan token refresh}  }
+{ "date": "2023-01-26 21:19:16.212", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": refresh token harus string}  }
+{ "date": "2023-01-26 21:19:17.500", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada}  }
+{ "date": "2023-01-26 21:19:17.544", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat menu baru karena tipe data tidak sesuai}  }
+{ "date": "2023-01-26 21:19:18.553", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada}  }
+{ "date": "2023-01-26 21:19:18.604", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena tipe data tidak sesuai}  }
+{ "date": "2023-01-26 21:19:18.649", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena karakter username melebihi batas limit}  }
+{ "date": "2023-01-26 21:19:18.693", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": tidak dapat membuat user baru karena username mengandung karakter terlarang}  }
+{ "date": "2023-01-26 21:19:18.752", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": Username telah digunakan}  }
+{ "date": "2023-01-26 21:19:22.117", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": Error}  }
+{ "date": "2023-01-26 21:19:22.132", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": }  }
+{ "date": "2023-01-26 21:19:50.392", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:19:55.692", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:19:55.700", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:19:56.003", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:19:56.009", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:19:57.068", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:19:57.292", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:19:57.346", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:19:57.413", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:19:57.747", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:19:57.805", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:19:57.862", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:19:57.930", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:19:58.057", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:19:58.118", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:19:58.199", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:19:59.375", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:19:59.426", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:19:59.464", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:19:59.497", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:19:59.538", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:20:00.753", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:20:00.790", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:22:21.795", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:22:27.141", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:22:27.150", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:22:28.496", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:22:28.811", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:22:28.874", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:22:28.956", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:22:29.290", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:22:29.355", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:22:29.412", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:22:29.484", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:22:29.631", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:22:29.711", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:22:29.776", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:22:30.935", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:22:30.993", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:22:31.047", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:22:31.103", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:22:31.168", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:22:32.368", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:22:32.401", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:22:35.449", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:22:35.456", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:22:53.122", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:22:53.129", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:23:00.626", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:23:00.635", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:23:04.873", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:04.926", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:23:04.987", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:23:05.049", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:23:05.102", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:23:11.633", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:23:11.647", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:23:16.295", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:16.343", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:23:16.396", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:23:16.449", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:23:16.517", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:23:17.325", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:22.609", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:22.626", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:23.715", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:23.746", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:23:24.934", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:23:25.223", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:23:25.276", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:23:25.327", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:23:25.645", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:25.708", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:25.784", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:23:25.857", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:25.987", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:26.062", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:26.132", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:34.408", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:39.698", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:39.706", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:40.800", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:23:41.079", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:23:41.125", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:23:41.185", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:23:41.566", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:41.615", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:41.672", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:23:41.744", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:41.898", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:41.960", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:42.030", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:47.483", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:52.800", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:52.810", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:23:54.038", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:23:54.288", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:23:54.349", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:23:54.414", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:23:54.721", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:54.784", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:54.834", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:23:54.899", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:55.041", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:23:55.108", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:23:55.174", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:23:56.429", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:56.481", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:23:56.542", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:23:56.587", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:23:56.634", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:23:57.891", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:23:57.928", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:24:01.028", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:24:01.035", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:24:41.272", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:24:46.557", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:24:46.564", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:24:47.970", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:24:48.209", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:24:48.263", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:24:48.329", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:24:48.620", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:24:48.680", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:24:48.743", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:24:48.820", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:24:48.971", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:24:49.039", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:24:49.105", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:24:50.159", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:24:50.213", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:24:50.276", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:24:50.328", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:24:50.403", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:24:51.800", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:24:51.851", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:24:54.578", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:24:54.585", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:27:43.836", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:27:44.098", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:27:44.108", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:27:45.160", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:27:45.387", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:27:45.438", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:27:45.501", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:27:45.796", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:27:45.861", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:27:45.928", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:27:45.997", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:27:46.120", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:27:46.179", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:27:46.237", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:27:47.489", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:27:47.536", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:27:48.499", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:27:48.552", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:27:48.604", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:27:48.655", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:27:48.710", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:27:52.095", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:27:52.100", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:28:05.772", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:28:05.994", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:28:06.054", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:28:06.117", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:28:06.431", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:28:06.511", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:28:06.568", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:28:06.635", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:28:06.767", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:28:06.829", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:28:06.906", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:28:07.784", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:08.031", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:28:08.040", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:28:09.226", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:09.257", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:28:10.939", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:10.978", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:28:11.041", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:28:11.078", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:28:11.142", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:28:14.341", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:28:14.345", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }
+{ "date": "2023-01-26 21:28:22.830", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username tidak ditemukan"}  }
+{ "date": "2023-01-26 21:28:23.065", "level": "error", "data": { "url": "/login", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "kredensial yang Anda masukkan salah"}  }
+{ "date": "2023-01-26 21:28:23.126", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan username dan password"}  }
+{ "date": "2023-01-26 21:28:23.180", "level": "error", "data": { "url": "/login", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "username dan password harus string"}  }
+{ "date": "2023-01-26 21:28:23.485", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:28:23.547", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:28:23.607", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak valid"}  }
+{ "date": "2023-01-26 21:28:23.659", "level": "error", "data": { "url": "/refreshtoken", "code": 400, "method": "PUT", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:28:23.778", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token tidak ditemukan di database"}  }
+{ "date": "2023-01-26 21:28:23.843", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "harus mengirimkan token refresh"}  }
+{ "date": "2023-01-26 21:28:23.904", "level": "error", "data": { "url": "/logout", "code": 400, "method": "DELETE", "ip": "::ffff:127.0.0.1", "message": "refresh token harus string"}  }
+{ "date": "2023-01-26 21:28:24.916", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:24.961", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:28:25.008", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena karakter username melebihi batas limit"}  }
+{ "date": "2023-01-26 21:28:25.056", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena username mengandung karakter terlarang"}  }
+{ "date": "2023-01-26 21:28:25.126", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Username telah digunakan"}  }
+{ "date": "2023-01-26 21:28:26.221", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:26.265", "level": "error", "data": { "url": "/menus", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat menu baru karena tipe data tidak sesuai"}  }
+{ "date": "2023-01-26 21:28:27.033", "level": "error", "data": { "url": "/users", "code": 400, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "tidak dapat membuat user baru karena properti yang dibutuhkan tidak ada"}  }
+{ "date": "2023-01-26 21:28:27.045", "level": "error", "data": { "url": "/users", "code": 500, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "terjadi kegagalan pada server kami"}  }
+{ "date": "2023-01-26 21:28:27.278", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:28:27.287", "level": "error", "data": { "url": "/menus", "code": 401, "method": "POST", "ip": "::ffff:127.0.0.1", "message": "Authentication Error"}  }
+{ "date": "2023-01-26 21:28:30.699", "level": "error", "data": { "url": "/test", "code": 400, "method": "GET", "ip": "127.0.0.1", "message": "Error"}  }
+{ "date": "2023-01-26 21:28:30.705", "level": "error", "data": { "url": "", "code": 0, "method": "", "ip": "", "message": ""}  }

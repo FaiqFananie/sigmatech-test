@@ -1,11 +1,12 @@
+const winston = require('../../../Infrastructures/logger')
+const Logger = require('../../../Applications/debug/Logger')
 const CheckAuthenticationUseCase = require('../../../Applications/use_case/CheckAuthenticationUseCase')
 const ClientError = require('../../../Commons/exceptions/ClientError')
 const DomainErrorTranslator = require('../../../Commons/exceptions/DomainErrorTranslator')
 const AccessToken = require('../../../Domains/authentications/entities/AccessToken')
 
 class Middleware {
-  constructor (logger, container) {
-    this._logger = logger
+  constructor (container) {
     this._container = container
 
     this.responseError = this.responseError.bind(this)
@@ -16,7 +17,8 @@ class Middleware {
     const translatedError = DomainErrorTranslator.translate(error)
 
     if (translatedError instanceof ClientError) {
-      this._logger.error(`{ "url": "${req.originalUrl}", "code": ${translatedError.statusCode}, "method": "${req.method}", "ip": "${req.ip}", "message": "${translatedError.message}"}`)
+      const logger = this._container.getInstance(Logger.name)
+      logger.printLog(req.originalUrl, translatedError.statusCode, req.method, req.ip, translatedError.message)
       res.status(translatedError.statusCode)
       res.json({
         status: 'fail',
@@ -25,7 +27,7 @@ class Middleware {
       return res
     }
 
-    this._logger.error(`{ "url": "${req.originalUrl}", "code": 500, "method": "${req.method}", "ip": "${req.ip}", "message": "terjadi kegagalan pada server kami"}`)
+    winston.error(`{ "url": "${req.originalUrl}", "code": 500, "method": "${req.method}", "ip": "${req.ip}", "message": "terjadi kegagalan pada server kami"}`)
     res.status(500)
     res.json({
       status: 'fail',

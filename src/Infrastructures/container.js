@@ -2,6 +2,7 @@ const { createContainer } = require('instances-container')
 const { nanoid } = require('nanoid')
 const bcrypt = require('bcrypt')
 const Jwt = require('@hapi/jwt')
+const winston = require('./logger')
 
 const User = require('../../models/user')
 const Authentication = require('../../models/authentication')
@@ -22,6 +23,8 @@ const MenuRepositoryPostgres = require('./repository/MenuRepositoryPostgres')
 const Menu = require('../../models/menu')
 const AddMenuUseCase = require('../Applications/use_case/AddMenuUseCase')
 const CheckAuthenticationUseCase = require('../Applications/use_case/CheckAuthenticationUseCase')
+const Logger = require('../Applications/debug/Logger')
+const WinstonLogger = require('./debug/WinstonLogger')
 
 // creating container
 const container = createContainer()
@@ -85,6 +88,17 @@ container.register([
       dependencies: [
         {
           concrete: Jwt.token
+        }
+      ]
+    }
+  },
+  {
+    key: Logger.name,
+    Class: WinstonLogger,
+    parameter: {
+      dependencies: [
+        {
+          concrete: winston
         }
       ]
     }

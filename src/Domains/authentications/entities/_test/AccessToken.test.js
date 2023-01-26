@@ -12,7 +12,7 @@ describe('Access Token entities', () => {
   it('should create Access Token entities correctly', () => {
     // Arrange
     const headers = {
-      authorization: 'bearer ALJNFLNDOISBOKEFKS'
+      authorization: 'Bearer ALJNFLNDOISBOKEFKS'
     }
 
     // Action

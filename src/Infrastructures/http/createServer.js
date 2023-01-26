@@ -9,7 +9,7 @@ const routes = require('../../Interfaces/routes/route')
 const Middleware = require('../../Interfaces/routes/handlers/Middleware')
 
 const createServer = (container) => {
-  const middleware = new Middleware(winston, container)
+  const middleware = new Middleware(container)
 
   const app = express()
   app.use(bodyParser.json({ limit: '5mb', type: 'application/json' }))
