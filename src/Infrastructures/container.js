@@ -20,7 +20,7 @@ const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAu
 const LogoutUserUseCase = require('../Applications/use_case/LogoutUserUseCase')
 const MenuRepository = require('../Domains/menus/MenuRepository')
 const MenuRepositoryPostgres = require('./repository/MenuRepositoryPostgres')
-const Menu = require('../../models/menu')
+const { Menu, Order } = require('../../models/menu_order')
 const AddMenuUseCase = require('../Applications/use_case/AddMenuUseCase')
 const CheckAuthenticationUseCase = require('../Applications/use_case/CheckAuthenticationUseCase')
 const Logger = require('../Applications/debug/Logger')
@@ -29,6 +29,9 @@ const GetMenuUseCase = require('../Applications/use_case/GetMenuUseCase')
 const GetAllMenuUseCase = require('../Applications/use_case/GetAllMenuUseCase')
 const EditMenuUseCase = require('../Applications/use_case/EditMenuUseCase')
 const DeleteMenuUseCase = require('../Applications/use_case/DeleteMenuUseCase')
+const OrderRepository = require('../Domains/orders/OrderRepository')
+const OrderRepositoryPostgres = require('./repository/OrderRepositoryPostgres')
+const AddOrderUseCase = require('../Applications/use_case/AddOrderUseCase')
 
 // creating container
 const container = createContainer()
@@ -70,6 +73,17 @@ container.register([
         },
         {
           concrete: nanoid
+        }
+      ]
+    }
+  },
+  {
+    key: OrderRepository.name,
+    Class: OrderRepositoryPostgres,
+    parameter: {
+      dependencies: [
+        {
+          concrete: Order
         }
       ]
     }
@@ -262,6 +276,23 @@ container.register([
     parameter: {
       injectType: 'destructuring',
       dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: AddOrderUseCase.name,
+    Class: AddOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
+        },
         {
           name: 'menuRepository',
           internal: MenuRepository.name

@@ -25,4 +25,29 @@ const Menu = sequelize.define('menus', {
   }
 }, { paranoid: true })
 
-module.exports = Menu
+const Order = sequelize.define('orders', {
+  id: {
+    allowNull: false,
+    primaryKey: true,
+    type: DataTypes.STRING
+  },
+  tableNumber: {
+    type: DataTypes.INTEGER
+  },
+  isPaid: {
+    type: DataTypes.BOOLEAN
+  }
+}, { paranoid: true })
+
+const OrderMenu = sequelize.define('order_menus', {}, { timestamps: false })
+
+Menu.belongsToMany(Order, {
+  through: OrderMenu,
+  foreignKey: 'menuId'
+})
+Order.belongsToMany(Menu, {
+  through: OrderMenu,
+  foreignKey: 'orderId'
+})
+
+module.exports = { Menu, Order, OrderMenu }

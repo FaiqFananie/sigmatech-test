@@ -22,7 +22,9 @@ DomainErrorTranslator._directories = {
   'MENU_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai'),
   'CHECK_AUTHENTICATION_USE_CASE.NOT_CONTAIN_ACCESS_TOKEN': new AuthenticationError('Authentication Error'),
   'CHECK_AUTHENTICATION_USE_CASE.PAYLOAD_NOT_MEET_DATA_TYPE_SPECIFICATION': new AuthenticationError('Authentication Error'),
-  'ACCESS_TOKEN.NOT_CONTAIN_NEEDED_PROPERTY': new AuthenticationError('Authentication Error')
+  'ACCESS_TOKEN.NOT_CONTAIN_NEEDED_PROPERTY': new AuthenticationError('Authentication Error'),
+  'ORDER_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('properti yang dibutuhkan belum cukup'),
+  'ORDER_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai')
 
 }
 

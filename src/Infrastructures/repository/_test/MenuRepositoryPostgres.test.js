@@ -1,7 +1,7 @@
 const MenusTableTestHelper = require('../../../tests/MenusTableTestHelper')
 const MenuPayload = require('../../../Domains/menus/entities/MenuPayload')
 const MenuRepositoryPostgres = require('../MenuRepositoryPostgres')
-const Menu = require('../../../../models/menu')
+const { Menu } = require('../../../../models/menu_order')
 const NotFoundError = require('../../../Commons/exceptions/NotFoundError')
 const InvariantError = require('../../../Commons/exceptions/InvariantError')
 

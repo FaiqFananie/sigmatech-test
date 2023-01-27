@@ -26,7 +26,7 @@ describe('MenuPayload entities', () => {
     expect(() => new MenuPayload(payload)).toThrowError('MENU_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION')
   })
 
-  it('should create UserLogin entities correctly', () => {
+  it('should create MenuPayload entities correctly', () => {
     // Arrange
     const payload = {
       name: 'nasi goreng',

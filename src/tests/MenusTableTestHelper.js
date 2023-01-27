@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-const Menu = require('../../models/menu')
+const { Menu } = require('../../models/menu_order')
 
 const MenusTableTestHelper = {
   async addMenus ({
@@ -13,7 +13,7 @@ const MenusTableTestHelper = {
       price
     })
 
-    return newMenu.id
+    return newMenu
   },
 
   async findMenusById (id) {
