@@ -25,6 +25,10 @@ const AddMenuUseCase = require('../Applications/use_case/AddMenuUseCase')
 const CheckAuthenticationUseCase = require('../Applications/use_case/CheckAuthenticationUseCase')
 const Logger = require('../Applications/debug/Logger')
 const WinstonLogger = require('./debug/WinstonLogger')
+const GetMenuUseCase = require('../Applications/use_case/GetMenuUseCase')
+const GetAllMenuUseCase = require('../Applications/use_case/GetAllMenuUseCase')
+const EditMenuUseCase = require('../Applications/use_case/EditMenuUseCase')
+const DeleteMenuUseCase = require('../Applications/use_case/DeleteMenuUseCase')
 
 // creating container
 const container = createContainer()
@@ -209,6 +213,58 @@ container.register([
         {
           name: 'userRepository',
           internal: UserRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: GetMenuUseCase.name,
+    Class: GetMenuUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: GetAllMenuUseCase.name,
+    Class: GetAllMenuUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: EditMenuUseCase.name,
+    Class: EditMenuUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: DeleteMenuUseCase.name,
+    Class: DeleteMenuUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
         }
       ]
     }

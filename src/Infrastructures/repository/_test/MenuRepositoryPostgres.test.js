@@ -167,7 +167,7 @@ describe('MenuRepositoryPostgres', () => {
   describe('deleteMenu function', () => {
     it('should delete menu correctly', async () => {
       // Arrange
-      await MenusTableTestHelper.addMenus({ id: 'menu-123' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-123', ready: false })
       const menuRepositoryPostgres = new MenuRepositoryPostgres(Menu, {})
 
       // Action & Assert

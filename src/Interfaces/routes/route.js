@@ -21,6 +21,10 @@ const routes = (app, container, middleware) => {
 
   // Menu
   app.post('/menus', middleware.checkAuth, menusHandler.postMenuHandler)
+  app.get('/menus/:id', middleware.checkAuth, menusHandler.getMenuHandler)
+  app.get('/menus', middleware.checkAuth, menusHandler.getAllMenuHandler)
+  app.put('/menus/:id', middleware.checkAuth, menusHandler.editMenuHandler)
+  app.delete('/menus/:id', middleware.checkAuth, menusHandler.deleteMenuHandler)
 }
 
 module.exports = routes

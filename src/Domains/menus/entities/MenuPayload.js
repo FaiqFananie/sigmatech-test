@@ -11,7 +11,7 @@ class MenuPayload {
   _verifyPayload (payload) {
     const { name, type, ready, price } = payload
 
-    if (!name || !type || !ready || !price) {
+    if (!name || !type || ready === undefined || ready === null || !price) {
       throw new Error('MENU_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY')
     }
 

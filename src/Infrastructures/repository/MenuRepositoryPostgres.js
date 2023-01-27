@@ -39,15 +39,19 @@ class MenuRepositoryPostgres extends MenuRepository {
     }
   }
 
-  async verifyAvailableMenu (id) {
+  async verifyAvailableMenu (id, option = '') {
     const menu = await this._menu.findByPk(id)
 
     if (!menu) {
       throw new NotFoundError('Menu tidak ditemukan')
     }
 
-    if (menu.ready === false) {
+    if (menu.ready === false && option !== 'delete') {
       throw new InvariantError('Menu ini sedang tidak tersedia')
+    }
+
+    if (menu.ready === true && option === 'delete') {
+      throw new InvariantError('Menu ini masih tersedia')
     }
   }
 

@@ -18,8 +18,8 @@ DomainErrorTranslator._directories = {
   'REFRESH_AUTHENTICATION_USE_CASE.PAYLOAD_NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('refresh token harus string'),
   'DELETE_AUTHENTICATION_USE_CASE.NOT_CONTAIN_REFRESH_TOKEN': new InvariantError('harus mengirimkan token refresh'),
   'DELETE_AUTHENTICATION_USE_CASE.PAYLOAD_NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('refresh token harus string'),
-  'MENU_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('tidak dapat membuat menu baru karena properti yang dibutuhkan tidak ada'),
-  'MENU_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tidak dapat membuat menu baru karena tipe data tidak sesuai'),
+  'MENU_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('properti yang dibutuhkan belum cukup'),
+  'MENU_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai'),
   'CHECK_AUTHENTICATION_USE_CASE.NOT_CONTAIN_ACCESS_TOKEN': new AuthenticationError('Authentication Error'),
   'CHECK_AUTHENTICATION_USE_CASE.PAYLOAD_NOT_MEET_DATA_TYPE_SPECIFICATION': new AuthenticationError('Authentication Error'),
   'ACCESS_TOKEN.NOT_CONTAIN_NEEDED_PROPERTY': new AuthenticationError('Authentication Error')

@@ -1,14 +1,14 @@
 const MenuPayload = require('../../Domains/menus/entities/MenuPayload')
 
-class AddMenuUseCase {
+class EditMenuUseCase {
   constructor ({ menuRepository }) {
     this._menuRepository = menuRepository
   }
 
-  async execute (useCasePayload) {
+  async execute (id, useCasePayload) {
     const menuPayload = new MenuPayload(useCasePayload)
-    return this._menuRepository.addMenu(menuPayload)
+    return this._menuRepository.editMenu(id, menuPayload)
   }
 }
 
-module.exports = AddMenuUseCase
+module.exports = EditMenuUseCase

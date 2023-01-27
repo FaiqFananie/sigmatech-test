@@ -27,6 +27,7 @@ class Middleware {
       return res
     }
 
+    console.log(error)
     winston.error(`{ "url": "${req.originalUrl}", "code": 500, "method": "${req.method}", "ip": "${req.ip}", "message": "terjadi kegagalan pada server kami"}`)
     res.status(500)
     res.json({
