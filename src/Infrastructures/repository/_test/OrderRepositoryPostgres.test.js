@@ -1,4 +1,5 @@
 const { Order, Menu } = require('../../../../models/menu_order')
+const AuthorizationError = require('../../../Commons/exceptions/AuthorizationError')
 const NotFoundError = require('../../../Commons/exceptions/NotFoundError')
 const MenusTableTestHelper = require('../../../tests/MenusTableTestHelper')
 const OrdersTableTestHelper = require('../../../tests/OrdersTableTestHelper')
@@ -18,6 +19,7 @@ describe('OrderRepositoryPostgres', () => {
       const orderPayload = {
         tableNumber: 1,
         isPaid: false,
+        createdBy: 'user-123',
         menus: [
           'menu-123',
           'menu-124'
@@ -37,6 +39,7 @@ describe('OrderRepositoryPostgres', () => {
       // Arrange
       const orderPayload = {
         isPaid: 'a',
+        createdBy: 'user-123',
         menus: []
       }
       const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, {})
@@ -70,6 +73,7 @@ describe('OrderRepositoryPostgres', () => {
       const orderPayload = {
         id: 'order-123',
         tableNumber: 1,
+        createdBy: 'user-123',
         isPaid: false,
         menus: [
           'menu-123',
@@ -82,11 +86,12 @@ describe('OrderRepositoryPostgres', () => {
       const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
 
       // Action
-      const order = await orderRepositoryPostgres.getOrderById('order-123')
+      const order = await orderRepositoryPostgres.getOrderById('order-123', 'user-123')
 
       // Assert
       expect(order.id).toEqual(orderPayload.id)
       expect(order.tableNumber).toEqual(orderPayload.tableNumber.toString())
+      expect(order.createdBy).toEqual(orderPayload.createdBy)
       expect(order.isPaid).toEqual(orderPayload.isPaid)
       expect(order.menus[0]).toBeDefined()
       expect(order.menus[1]).toBeDefined()
@@ -98,7 +103,17 @@ describe('OrderRepositoryPostgres', () => {
       const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
 
       // Action & Assert
-      await expect(orderRepositoryPostgres.getOrderById('menu-999')).rejects.toThrowError(NotFoundError)
+      await expect(orderRepositoryPostgres.getOrderById('order-999', 'user-123')).rejects.toThrowError(NotFoundError)
+    })
+
+    it('should throw AuthorizationError when order is made not by user', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123', createdBy: 'user-123' })
+
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.getOrderById('order-123', 'user-124')).rejects.toThrowError(AuthorizationError)
     })
   })
 

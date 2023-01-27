@@ -5,9 +5,11 @@ describe('GetOrderUseCase', () => {
   it('should orchestrating the get order action correctly', async () => {
     // Arrange
     const id = 'order-123'
+    const createdBy = 'user-123'
     const expectedResult = {
       id,
-      rableNumber: 1,
+      tableNumber: 1,
+      createdBy,
       isPaid: false,
       menus: []
     }
@@ -16,7 +18,8 @@ describe('GetOrderUseCase', () => {
     mockOrderRepository.getOrderById = jest.fn()
       .mockImplementation(() => Promise.resolve({
         id,
-        rableNumber: 1,
+        tableNumber: 1,
+        createdBy,
         isPaid: false,
         menus: []
       }))
@@ -26,10 +29,10 @@ describe('GetOrderUseCase', () => {
     })
 
     // Action
-    const result = await getOrderUseCase.execute(id)
+    const result = await getOrderUseCase.execute(id, createdBy)
 
     // Arrange
     expect(result).toEqual(expectedResult)
-    expect(mockOrderRepository.getOrderById).toBeCalledWith(id)
+    expect(mockOrderRepository.getOrderById).toBeCalledWith(id, createdBy)
   })
 })

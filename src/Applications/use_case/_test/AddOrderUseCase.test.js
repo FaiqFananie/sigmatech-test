@@ -6,9 +6,12 @@ const AddOrderUseCase = require('../AddOrderUseCase')
 describe('AddOrderUseCase', () => {
   it('should orchestrating the add order action correctly', async () => {
     // Arrange
+    jest.useFakeTimers('modern')
+    jest.setSystemTime(new Date(2023, 0, 27))
     const useCasePayload = {
       tableNumber: 1,
-      isPaid: false
+      isPaid: false,
+      createdBy: 'user-123'
     }
 
     const idOrder = 'order-123'
@@ -38,14 +41,19 @@ describe('AddOrderUseCase', () => {
     expect(mockOrderRepository.addOrder).toBeCalledWith('ABC27012023-002', new OrderPayload({
       tableNumber: useCasePayload.tableNumber,
       isPaid: useCasePayload.isPaid,
+      createdBy: 'user-123',
       menus: []
     }))
   })
 
   it('should orchestrating the add order action correctly', async () => {
     // Arrange
+    jest.useFakeTimers('modern')
+    jest.setSystemTime(new Date(2023, 0, 27))
+
     const useCasePayload = {
       tableNumber: 1,
+      createdBy: 'user-123',
       isPaid: false
     }
 
@@ -76,6 +84,7 @@ describe('AddOrderUseCase', () => {
     expect(mockOrderRepository.addOrder).toBeCalledWith('ABC27012023-101', new OrderPayload({
       tableNumber: useCasePayload.tableNumber,
       isPaid: useCasePayload.isPaid,
+      createdBy: 'user-123',
       menus: []
     }))
   })
@@ -87,6 +96,7 @@ describe('AddOrderUseCase', () => {
 
     const useCasePayload = {
       tableNumber: 1,
+      createdBy: 'user-123',
       isPaid: false
     }
 
@@ -117,6 +127,7 @@ describe('AddOrderUseCase', () => {
     expect(mockOrderRepository.addOrder).toBeCalledWith('ABC27112023-092', new OrderPayload({
       tableNumber: useCasePayload.tableNumber,
       isPaid: useCasePayload.isPaid,
+      createdBy: 'user-123',
       menus: []
     }))
   })

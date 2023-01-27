@@ -32,10 +32,16 @@ const Order = sequelize.define('orders', {
     type: DataTypes.STRING
   },
   tableNumber: {
+    allowNull: false,
     type: DataTypes.INTEGER
   },
   isPaid: {
+    allowNull: false,
     type: DataTypes.BOOLEAN
+  },
+  createdBy: {
+    allowNull: false,
+    type: DataTypes.STRING
   }
 }, { paranoid: true })
 

@@ -3,8 +3,8 @@ class GetOrderUseCase {
     this._orderRepository = orderRepository
   }
 
-  async execute (id) {
-    return await this._orderRepository.getOrderById(id)
+  async execute (id, createdBy) {
+    return await this._orderRepository.getOrderById(id, createdBy)
   }
 }
 

@@ -16,6 +16,7 @@ describe('OrderPayload entities', () => {
     const payload = {
       tableNumber: 1,
       isPaid: false,
+      createdBy: 'user-123',
       menus: {}
     }
 
@@ -27,7 +28,8 @@ describe('OrderPayload entities', () => {
     // Arrange
     const payload = {
       tableNumber: '1',
-      isPaid: false
+      isPaid: false,
+      createdBy: 'user-123'
     }
 
     // Action & Assert
@@ -39,6 +41,7 @@ describe('OrderPayload entities', () => {
     const payload = {
       tableNumber: 1,
       isPaid: false,
+      createdBy: 'user-123',
       menus: [12, 23]
     }
 
@@ -50,7 +53,8 @@ describe('OrderPayload entities', () => {
     // Arrange
     const payload = {
       tableNumber: 1,
-      isPaid: false
+      isPaid: false,
+      createdBy: 'user-123'
     }
 
     // Action

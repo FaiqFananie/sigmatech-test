@@ -9,9 +9,10 @@ describe('/orders endpoint', () => {
   let server
   let accessToken
   let accessToken2
+  let response1
   beforeAll(async () => {
     server = createServer(container)
-    await test(server).post('/users').send({
+    response1 = await test(server).post('/users').send({
       username: 'faiqfananie3',
       password: 'secret3',
       fullname: 'Faiq Fananie',
@@ -52,6 +53,7 @@ describe('/orders endpoint', () => {
       const requestPayload = {
         tableNumber: 1,
         isPaid: false,
+        createdBy: 'user-123',
         menus: [
           'menu-123',
           'menu-124'
@@ -71,6 +73,7 @@ describe('/orders endpoint', () => {
       // Arrange
       const requestPayload = {
         tableNumber: 1,
+        createdBy: 'user-123',
         isPaid: false
       }
 
@@ -102,7 +105,8 @@ describe('/orders endpoint', () => {
       // Arrange
       const requestPayload = {
         tableNumber: 1,
-        isPaid: []
+        isPaid: [],
+        createdBy: 'user-123'
       }
 
       // Action
@@ -118,7 +122,8 @@ describe('/orders endpoint', () => {
       // Arrange
       const requestPayload = {
         tableNumber: 1,
-        isPaid: []
+        isPaid: [],
+        createdBy: 'user-123'
       }
 
       // Action
@@ -144,7 +149,7 @@ describe('/orders endpoint', () => {
 
     it('should throw status 200 when menu is found', async () => {
       // Arrange
-      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      await OrdersTableTestHelper.addOrder({ id: 'order-123', createdBy: response1.body.data.id })
 
       // Action
       const response = await test(server).get('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)

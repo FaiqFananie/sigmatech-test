@@ -9,10 +9,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       tableNumber: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       isPaid: {
+        allowNull: false,
         type: Sequelize.BOOLEAN
+      },
+      createdBy: {
+        allowNull: false,
+        type: Sequelize.STRING
       },
       deletedAt: {
         type: Sequelize.DATE

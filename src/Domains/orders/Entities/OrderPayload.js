@@ -1,20 +1,21 @@
 class OrderPayload {
-  constructor ({ tableNumber, isPaid, menus = [] }) {
-    this._verifyPayload({ tableNumber, isPaid, menus })
+  constructor ({ tableNumber, isPaid, createdBy, menus = [] }) {
+    this._verifyPayload({ tableNumber, isPaid, createdBy, menus })
 
     this.tableNumber = tableNumber
     this.isPaid = isPaid
+    this.createdBy = createdBy
     this.menus = menus
   }
 
   _verifyPayload (payload) {
-    const { tableNumber, isPaid, menus } = payload
+    const { tableNumber, isPaid, createdBy, menus } = payload
 
-    if (!tableNumber || isPaid === undefined || isPaid === null) {
+    if (!tableNumber || isPaid === undefined || isPaid === null || !createdBy) {
       throw new Error('ORDER_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY')
     }
 
-    if (typeof tableNumber !== 'number' || typeof isPaid !== 'boolean') {
+    if (typeof tableNumber !== 'number' || typeof isPaid !== 'boolean' || typeof createdBy !== 'string') {
       throw new Error('ORDER_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION')
     }
 

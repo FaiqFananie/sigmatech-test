@@ -19,7 +19,7 @@ class Ordershandler {
       }
 
       const addOrderUseCase = this._container.getInstance(AddOrderUseCase.name)
-      const id = await addOrderUseCase.execute(req.body)
+      const id = await addOrderUseCase.execute({ createdBy: res.locals.user.id, ...req.body })
 
       return res.status(201).json({
         status: 'success',
@@ -41,7 +41,7 @@ class Ordershandler {
       const getOrderUseCase = this._container.getInstance(GetOrderUseCase.name)
       const { id } = req.params
 
-      const result = await getOrderUseCase.execute(id)
+      const result = await getOrderUseCase.execute(id, res.locals.user.id)
 
       return res.status(200).json({
         status: 'success',

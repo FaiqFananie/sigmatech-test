@@ -1,3 +1,4 @@
+const AuthorizationError = require('../../Commons/exceptions/AuthorizationError')
 const NotFoundError = require('../../Commons/exceptions/NotFoundError')
 const OrderRepository = require('../../Domains/orders/OrderRepository')
 const sequelize = require('../database/postgres')
@@ -10,13 +11,14 @@ class OrderRepositoryPostgres extends OrderRepository {
   }
 
   async addOrder (id, orderPayload) {
-    const { tableNumber, isPaid, menus } = orderPayload
+    const { tableNumber, isPaid, createdBy, menus } = orderPayload
     const t = await sequelize.transaction()
 
     try {
       const order = await this._order.create({
         id,
         tableNumber,
+        createdBy,
         isPaid
       })
 
@@ -32,7 +34,7 @@ class OrderRepositoryPostgres extends OrderRepository {
     }
   }
 
-  async getOrderById (id) {
+  async getOrderById (id, createdBy) {
     const order = await this._order.findByPk(id, {
       include: {
         model: this._menu,
@@ -47,6 +49,10 @@ class OrderRepositoryPostgres extends OrderRepository {
       throw new NotFoundError('Order tidak ditemukan')
     }
 
+    if (order.createdBy !== createdBy) {
+      throw new AuthorizationError('Anda tidak punya akses untuk aksi ini')
+    }
+
     return order
   }
 
@@ -54,13 +60,6 @@ class OrderRepositoryPostgres extends OrderRepository {
     const order = await this._order.findAll({
       where: {
         isPaid: false
-      },
-      include: {
-        model: this._menu,
-        attributes: ['id', 'name', 'price'],
-        through: {
-          attributes: []
-        }
       }
     })
 
