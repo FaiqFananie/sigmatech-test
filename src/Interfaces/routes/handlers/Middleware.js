@@ -41,7 +41,9 @@ class Middleware {
     try {
       const { token } = new AccessToken(req.headers)
       const checkAuthentication = this._container.getInstance(CheckAuthenticationUseCase.name)
-      await checkAuthentication.execute(token)
+      const result = await checkAuthentication.execute(token)
+
+      res.locals.user = result
       next()
     } catch (err) {
       next(err)

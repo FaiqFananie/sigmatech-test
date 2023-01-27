@@ -13,7 +13,7 @@ describe('RefreshAuthenticationUseCase', () => {
     mockAuthenticationTokenManager.verifyAccessToken = jest.fn()
       .mockImplementation(() => Promise.resolve())
     mockAuthenticationTokenManager.decodePayload = jest.fn()
-      .mockImplementation(() => Promise.resolve({ id: 'user-123' }))
+      .mockImplementation(() => Promise.resolve({ id: 'user-123', username: 'faiqfananie', role: 'pelayan' }))
     mockUserRepository.checkIdAuth = jest.fn()
       .mockImplementation(() => Promise.resolve())
 
@@ -24,7 +24,7 @@ describe('RefreshAuthenticationUseCase', () => {
     })
 
     // Action
-    await checkAuthenticationUseCase.execute(headers)
+    const result = await checkAuthenticationUseCase.execute(headers)
 
     // Assert
     expect(mockAuthenticationTokenManager.verifyAccessToken)
@@ -33,5 +33,8 @@ describe('RefreshAuthenticationUseCase', () => {
       .toBeCalledWith(headers)
     expect(mockUserRepository.checkIdAuth)
       .toBeCalledWith('user-123')
+    expect(result.id).toEqual('user-123')
+    expect(result.username).toEqual('faiqfananie')
+    expect(result.role).toEqual('pelayan')
   })
 })

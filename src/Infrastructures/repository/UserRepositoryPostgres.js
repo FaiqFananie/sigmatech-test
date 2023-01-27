@@ -49,7 +49,7 @@ class UserRepositoryPostgres extends UserRepository {
       throw new InvariantError('user tidak ditemukan')
     }
 
-    return user.id
+    return { id: user.id, role: user.role }
   }
 
   async checkIdAuth (id) {

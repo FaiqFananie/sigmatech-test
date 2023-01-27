@@ -10,8 +10,10 @@ class CheckAuthenticationUseCase {
   async execute (headers) {
     await this._authenticationTokenManager.verifyAccessToken(headers)
 
-    const { id } = await this._authenticationTokenManager.decodePayload(headers)
+    const { id, username, role } = await this._authenticationTokenManager.decodePayload(headers)
     await this._userRepository.checkIdAuth(id)
+
+    return { id, username, role }
   }
 }
 

@@ -88,14 +88,15 @@ describe('UserRepositoryPostgres', () => {
 
     it('should return user id correctly', async () => {
       // Arrange
-      await UsersTableTestHelper.addUser({ id: 'user-321', username: 'faiqfananie' })
+      await UsersTableTestHelper.addUser({ id: 'user-321', username: 'faiqfananie', role: 'pelayan' })
       const userRepositoryPostgres = new UserRepositoryPostgres(User, {})
 
       // Action
-      const userId = await userRepositoryPostgres.getIdByUsername('faiqfananie')
+      const { id, role } = await userRepositoryPostgres.getIdByUsername('faiqfananie')
 
       // Assert
-      expect(userId).toEqual('user-321')
+      expect(id).toEqual('user-321')
+      expect(role).toEqual('pelayan')
     })
   })
 
