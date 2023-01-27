@@ -1,10 +1,12 @@
+const NotFoundError = require('../../Commons/exceptions/NotFoundError')
 const OrderRepository = require('../../Domains/orders/OrderRepository')
 const sequelize = require('../database/postgres')
 
 class OrderRepositoryPostgres extends OrderRepository {
-  constructor (model) {
+  constructor (model, menu) {
     super()
     this._order = model
+    this._menu = menu
   }
 
   async addOrder (id, orderPayload) {
@@ -28,6 +30,41 @@ class OrderRepositoryPostgres extends OrderRepository {
       await t.rollback()
       throw new Error(err.message)
     }
+  }
+
+  async getOrderById (id) {
+    const order = await this._order.findByPk(id, {
+      include: {
+        model: this._menu,
+        attributes: ['id', 'name', 'price'],
+        through: {
+          attributes: []
+        }
+      }
+    })
+
+    if (!order) {
+      throw new NotFoundError('Order tidak ditemukan')
+    }
+
+    return order
+  }
+
+  async getOrders () {
+    const order = await this._order.findAll({
+      where: {
+        isPaid: false
+      },
+      include: {
+        model: this._menu,
+        attributes: ['id', 'name', 'price'],
+        through: {
+          attributes: []
+        }
+      }
+    })
+
+    return order
   }
 
   async countOrders () {

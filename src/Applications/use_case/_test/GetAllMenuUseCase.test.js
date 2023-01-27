@@ -1,5 +1,5 @@
 const MenuRepository = require('../../../Domains/menus/MenuRepository')
-const GetMenuUseCase = require('../GetMenuUseCase')
+const GetAllMenuUseCase = require('../GetAllMenuUseCase')
 
 describe('GetAllMenuUseCase', () => {
   it('should orchestrating the get all menu action correctly', async () => {
@@ -13,7 +13,7 @@ describe('GetAllMenuUseCase', () => {
     }]
 
     const mockMenuRepository = new MenuRepository()
-    mockMenuRepository.getMenuById = jest.fn()
+    mockMenuRepository.getMenus = jest.fn()
       .mockImplementation(() => Promise.resolve([{
         id: 'menu-123',
         name: 'Nasi Goreng',
@@ -22,7 +22,7 @@ describe('GetAllMenuUseCase', () => {
         price: 20000
       }]))
 
-    const getMenuUseCase = new GetMenuUseCase({
+    const getMenuUseCase = new GetAllMenuUseCase({
       menuRepository: mockMenuRepository
     })
 
@@ -31,6 +31,6 @@ describe('GetAllMenuUseCase', () => {
 
     // Arrange
     expect(result).toEqual(expectedResult)
-    expect(mockMenuRepository.getMenuById).toBeCalled()
+    expect(mockMenuRepository.getMenus).toBeCalled()
   })
 })

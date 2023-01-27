@@ -1,4 +1,5 @@
-const { Order } = require('../../../../models/menu_order')
+const { Order, Menu } = require('../../../../models/menu_order')
+const NotFoundError = require('../../../Commons/exceptions/NotFoundError')
 const MenusTableTestHelper = require('../../../tests/MenusTableTestHelper')
 const OrdersTableTestHelper = require('../../../tests/OrdersTableTestHelper')
 const OrderRepositoryPostgres = require('../OrderRepositoryPostgres')
@@ -38,7 +39,7 @@ describe('OrderRepositoryPostgres', () => {
         isPaid: 'a',
         menus: []
       }
-      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, {})
 
       // Action & Assert
       await expect(orderRepositoryPostgres.addOrder('order-123', orderPayload)).rejects.toThrowError(Error)
@@ -50,7 +51,7 @@ describe('OrderRepositoryPostgres', () => {
       // Arrange
       await OrdersTableTestHelper.addOrder({ id: 'order-123' })
       await OrdersTableTestHelper.addOrder({ id: 'order-124' })
-      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, {})
 
       // Action
       const count = await orderRepositoryPostgres.countOrders()
@@ -58,5 +59,73 @@ describe('OrderRepositoryPostgres', () => {
       // Assert
       expect(count).toEqual(2)
     })
+  })
+
+  describe('getOrderById function', () => {
+    it('should return order data correctly', async () => {
+      // Arrange
+      await MenusTableTestHelper.addMenus({ id: 'menu-123' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-124' })
+
+      const orderPayload = {
+        id: 'order-123',
+        tableNumber: 1,
+        isPaid: false,
+        menus: [
+          'menu-123',
+          'menu-124'
+        ]
+      }
+
+      await OrdersTableTestHelper.addOrder(orderPayload)
+
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+      // Action
+      const order = await orderRepositoryPostgres.getOrderById('order-123')
+
+      // Assert
+      expect(order.id).toEqual(orderPayload.id)
+      expect(order.tableNumber).toEqual(orderPayload.tableNumber.toString())
+      expect(order.isPaid).toEqual(orderPayload.isPaid)
+      expect(order.menus[0]).toBeDefined()
+      expect(order.menus[1]).toBeDefined()
+    })
+
+    it('should throw NotFoundError when order is not found', async () => {
+      // Arrange
+
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.getOrderById('menu-999')).rejects.toThrowError(NotFoundError)
+    })
+  })
+
+  describe('getOrders function', () => {
+    it('should return order data correctly', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+      // Action
+      const order = await orderRepositoryPostgres.getOrders()
+
+      // Assert
+      expect(typeof order).toEqual('object')
+      expect(order.length).toEqual(1)
+    })
+  })
+
+  it('should return empty array =', async () => {
+    // Arrange
+    const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+    // Action
+    const order = await orderRepositoryPostgres.getOrders()
+
+    // Assert
+    expect(typeof order).toEqual('object')
+    expect(order.length).toEqual(0)
   })
 })

@@ -32,6 +32,8 @@ const DeleteMenuUseCase = require('../Applications/use_case/DeleteMenuUseCase')
 const OrderRepository = require('../Domains/orders/OrderRepository')
 const OrderRepositoryPostgres = require('./repository/OrderRepositoryPostgres')
 const AddOrderUseCase = require('../Applications/use_case/AddOrderUseCase')
+const GetOrderUseCase = require('../Applications/use_case/GetOrderUseCase')
+const GetAllOrderUseCase = require('../Applications/use_case/GetAllOrderUseCase')
 
 // creating container
 const container = createContainer()
@@ -83,7 +85,12 @@ container.register([
     parameter: {
       dependencies: [
         {
+          name: 'order',
           concrete: Order
+        },
+        {
+          name: 'menu',
+          concrete: Menu
         }
       ]
     }
@@ -296,6 +303,32 @@ container.register([
         {
           name: 'menuRepository',
           internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: GetOrderUseCase.name,
+    Class: GetOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: GetAllOrderUseCase.name,
+    Class: GetAllOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
         }
       ]
     }

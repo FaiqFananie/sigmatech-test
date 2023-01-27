@@ -30,6 +30,8 @@ const routes = (app, container, middleware) => {
 
   // Order
   app.post('/orders', middleware.checkAuth, ordersHandler.postOrderHandler)
+  app.get('/orders/:id', middleware.checkAuth, ordersHandler.getOrderHandler)
+  app.get('/orders', middleware.checkAuth, ordersHandler.getAllOrderHandler)
 }
 
 module.exports = routes

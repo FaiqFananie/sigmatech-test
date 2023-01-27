@@ -130,4 +130,80 @@ describe('/orders endpoint', () => {
       expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
     })
   })
+
+  describe('when GET /orders/:id', () => {
+    it('should throw status 404 when menu is not found', async () => {
+      // Arrange & Action
+      const response = await test(server).get('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(404)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Order tidak ditemukan')
+    })
+
+    it('should throw status 200 when menu is found', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).get('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.data).toBeDefined()
+    })
+
+    it('should response 403 when user has no access', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).get('/orders/order-123').set('Authorization', `Bearer ${accessToken2}`)
+
+      // Assert
+      expect(response.status).toEqual(403)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+    })
+  })
+
+  describe('when GET /orders', () => {
+    it('should return empty array when order is not found', async () => {
+      // Arrange & Action
+      const response = await test(server).get('/orders').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.data).toEqual([])
+    })
+
+    it('should return array of orders when orders is found', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).get('/orders').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.data).toBeDefined()
+    })
+  })
+
+  it('should response 403 when user has no access', async () => {
+    // Arrange
+    await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+    // Action
+    const response = await test(server).get('/orders').set('Authorization', `Bearer ${accessToken2}`)
+
+    // Assert
+    expect(response.status).toEqual(403)
+    expect(response.body.status).toEqual('fail')
+    expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+  })
 })
