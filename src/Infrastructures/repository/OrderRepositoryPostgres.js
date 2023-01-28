@@ -22,9 +22,7 @@ class OrderRepositoryPostgres extends OrderRepository {
         isPaid
       })
 
-      for (const menu of menus) {
-        await order.addMenu(menu)
-      }
+      await order.setMenus(menus)
 
       await t.commit()
       return order.id
@@ -64,6 +62,27 @@ class OrderRepositoryPostgres extends OrderRepository {
     })
 
     return order
+  }
+
+  async editOrder (id, editOrderPayload) {
+    const { tableNumber, menus } = editOrderPayload
+    const t = await sequelize.transaction()
+
+    const updatedOrder = await this._order.update({
+      tableNumber
+    }, { where: { id } })
+
+    if (updatedOrder[0] === 0) {
+      await t.rollback()
+      throw new NotFoundError('Order gagal diperbarui, Id tidak ditemukan')
+    }
+
+    if (menus.length > 0) {
+      const order = await this._order.findByPk(id)
+      await order.setMenus(menus)
+    }
+
+    await t.commit()
   }
 
   async countOrders () {

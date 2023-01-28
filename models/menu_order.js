@@ -45,7 +45,16 @@ const Order = sequelize.define('orders', {
   }
 }, { paranoid: true })
 
-const OrderMenu = sequelize.define('order_menus', {}, { timestamps: false })
+const OrderMenu = sequelize.define('order_menus', {
+  orderId: {
+    allowNull: false,
+    type: DataTypes.STRING
+  },
+  menuId: {
+    allowNull: false,
+    type: DataTypes.STRING
+  }
+}, { timestamps: false })
 
 Menu.belongsToMany(Order, {
   through: OrderMenu,

@@ -15,6 +15,10 @@ class OrderRepository {
     throw new Error('ORDER_REPOSITORY.METHOD_NOT_IMPLEMENTED')
   }
 
+  async editOrderStatus () {
+    throw new Error('ORDER_REPOSITORY.METHOD_NOT_IMPLEMENTED')
+  }
+
   async deleteOrder () {
     throw new Error('ORDER_REPOSITORY.METHOD_NOT_IMPLEMENTED')
   }

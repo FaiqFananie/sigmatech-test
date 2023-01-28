@@ -34,6 +34,7 @@ const OrderRepositoryPostgres = require('./repository/OrderRepositoryPostgres')
 const AddOrderUseCase = require('../Applications/use_case/AddOrderUseCase')
 const GetOrderUseCase = require('../Applications/use_case/GetOrderUseCase')
 const GetAllOrderUseCase = require('../Applications/use_case/GetAllOrderUseCase')
+const EditOrderUseCase = require('../Applications/use_case/EditOrderUseCase')
 
 // creating container
 const container = createContainer()
@@ -329,6 +330,23 @@ container.register([
         {
           name: 'orderRepository',
           internal: OrderRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: EditOrderUseCase.name,
+    Class: EditOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
+        },
+        {
+          name: 'menuRepository',
+          internal: MenuRepository.name
         }
       ]
     }

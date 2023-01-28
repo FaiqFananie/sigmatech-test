@@ -25,7 +25,7 @@ class AddOrderUseCase {
     const id = `ABC${now.getDate()}${month}${now.getFullYear()}-${total}`
 
     for (const menu of orderPayload.menus) {
-      this._menuRepository.verifyAvailableMenu(menu)
+      await this._menuRepository.verifyAvailableMenu(menu)
     }
     return this._orderRepository.addOrder(id, orderPayload)
   }

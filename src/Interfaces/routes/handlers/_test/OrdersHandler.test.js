@@ -4,6 +4,7 @@ const MenusTableTestHelper = require('../../../../tests/MenusTableTestHelper')
 const OrdersTableTestHelper = require('../../../../tests/OrdersTableTestHelper')
 
 const test = require('supertest')
+const OrderMenusTableTestHelper = require('../../../../tests/OrderMenusTableTestHelper')
 
 describe('/orders endpoint', () => {
   let server
@@ -41,6 +42,7 @@ describe('/orders endpoint', () => {
   })
 
   afterEach(async () => {
+    await OrderMenusTableTestHelper.cleanTable()
     await MenusTableTestHelper.cleanTable()
     await OrdersTableTestHelper.cleanTable()
   })
@@ -116,6 +118,29 @@ describe('/orders endpoint', () => {
       expect(response.status).toEqual(400)
       expect(response.body.status).toEqual('fail')
       expect(response.body.message).toEqual('tipe data tidak sesuai')
+    })
+
+    it('should return status 400 when Menu is not ready yet', async () => {
+      // Arrange
+      await MenusTableTestHelper.addMenus({ id: 'menu-123', ready: true })
+      await MenusTableTestHelper.addMenus({ id: 'menu-124', ready: false })
+      const requestPayload = {
+        tableNumber: 1,
+        isPaid: false,
+        menus: [
+          'menu-123',
+          'menu-124'
+        ],
+        createdBy: 'user-123'
+      }
+
+      // Action
+      const response = await test(server).post('/orders').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Menu ini sedang tidak tersedia')
     })
 
     it('should response 403 when user has no access', async () => {
@@ -197,18 +222,114 @@ describe('/orders endpoint', () => {
       expect(response.body.status).toEqual('success')
       expect(response.body.data).toBeDefined()
     })
+
+    it('should response 403 when user has no access', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).get('/orders').set('Authorization', `Bearer ${accessToken2}`)
+
+      // Assert
+      expect(response.status).toEqual(403)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+    })
   })
 
-  it('should response 403 when user has no access', async () => {
-    // Arrange
-    await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+  describe('when PUT /orders/:id', () => {
+    it('should return status 404 when menu is not found', async () => {
+      // Arrange
+      const requestPayload = {
+        tableNumber: 1
+      }
 
-    // Action
-    const response = await test(server).get('/orders').set('Authorization', `Bearer ${accessToken2}`)
+      // Action
+      const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
 
-    // Assert
-    expect(response.status).toEqual(403)
-    expect(response.body.status).toEqual('fail')
-    expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+      // Assert
+      expect(response.status).toEqual(404)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Order gagal diperbarui, Id tidak ditemukan')
+    })
+
+    it('should return status 400 when request payload not contain needed property', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).put('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('properti yang dibutuhkan belum cukup')
+    })
+
+    it('should return status 400 when request payload not meet data type specification', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        tableNumber: []
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('tipe data tidak sesuai')
+    })
+
+    it('should return status 400 when Menu is not ready yet', async () => {
+      // Arrange
+      await MenusTableTestHelper.addMenus({ id: 'menu-123', ready: false })
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        tableNumber: 1,
+        menus: ['menu-123']
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Menu ini sedang tidak tersedia')
+    })
+
+    it('should return status 403 when user has no access', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        tableNumber: 1
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken2}`)
+
+      // Assert
+      expect(response.status).toEqual(403)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+    })
+
+    it('should update order when order is found', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123', tableNumber: 1 })
+      const requestPayload = {
+        tableNumber: 2
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.message).toEqual('Order berhasil diperbarui')
+    })
   })
 })

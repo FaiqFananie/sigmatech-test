@@ -2,11 +2,13 @@ const { Order, Menu } = require('../../../../models/menu_order')
 const AuthorizationError = require('../../../Commons/exceptions/AuthorizationError')
 const NotFoundError = require('../../../Commons/exceptions/NotFoundError')
 const MenusTableTestHelper = require('../../../tests/MenusTableTestHelper')
+const OrderMenusTableTestHelper = require('../../../tests/OrderMenusTableTestHelper')
 const OrdersTableTestHelper = require('../../../tests/OrdersTableTestHelper')
 const OrderRepositoryPostgres = require('../OrderRepositoryPostgres')
 
 describe('OrderRepositoryPostgres', () => {
   afterEach(async () => {
+    await OrderMenusTableTestHelper.cleanTable()
     await MenusTableTestHelper.cleanTable()
     await OrdersTableTestHelper.cleanTable()
   })
@@ -130,17 +132,80 @@ describe('OrderRepositoryPostgres', () => {
       expect(typeof order).toEqual('object')
       expect(order.length).toEqual(1)
     })
+
+    it('should return empty array =', async () => {
+      // Arrange
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+
+      // Action
+      const order = await orderRepositoryPostgres.getOrders()
+
+      // Assert
+      expect(typeof order).toEqual('object')
+      expect(order.length).toEqual(0)
+    })
   })
 
-  it('should return empty array =', async () => {
-    // Arrange
-    const orderRepositoryPostgres = new OrderRepositoryPostgres(Order, Menu)
+  describe('editOrder function', () => {
+    it('should edit order correctly', async () => {
+      // Arrange
+      await MenusTableTestHelper.addMenus({ id: 'menu-123' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-124' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-125' })
+      await OrdersTableTestHelper.addOrder({ id: 'order-123', tableNumber: 1, menus: ['menu-123', 'menu-124'] })
+      const orderPayload = {
+        tableNumber: 2,
+        menus: [
+          'menu-123',
+          'menu-125'
+        ]
+      }
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
 
-    // Action
-    const order = await orderRepositoryPostgres.getOrders()
+      // Action
+      await orderRepositoryPostgres.editOrder('order-123', orderPayload)
 
-    // Assert
-    expect(typeof order).toEqual('object')
-    expect(order.length).toEqual(0)
+      // Assert
+      const order = await OrdersTableTestHelper.findOrdersById('order-123')
+      expect(order).toBeDefined()
+      expect(order.tableNumber).toEqual('2')
+      expect(order.menus[0].id).toEqual('menu-123')
+      expect(order.menus[1].id).toEqual('menu-125')
+    })
+
+    it('should edit order correctly when menus is empty', async () => {
+      // Arrange
+      await MenusTableTestHelper.addMenus({ id: 'menu-123' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-124' })
+      await MenusTableTestHelper.addMenus({ id: 'menu-125' })
+      await OrdersTableTestHelper.addOrder({ id: 'order-123', tableNumber: 1, menus: ['menu-123', 'menu-124'] })
+      const orderPayload = {
+        tableNumber: 2,
+        menus: []
+      }
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action
+      await orderRepositoryPostgres.editOrder('order-123', orderPayload)
+
+      // Assert
+      const order = await OrdersTableTestHelper.findOrdersById('order-123')
+      expect(order).toBeDefined()
+      expect(order.tableNumber).toEqual('2')
+      expect(order.menus[0].id).toEqual('menu-123')
+      expect(order.menus[1].id).toEqual('menu-124')
+    })
+
+    it('should throw NotFoundError if order is not found', async () => {
+      // Arrange
+      const orderPayload = {
+        tableNumber: 2,
+        menus: []
+      }
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.editOrder('order-123', orderPayload)).rejects.toThrowError(NotFoundError)
+    })
   })
 })
