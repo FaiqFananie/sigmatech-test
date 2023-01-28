@@ -85,6 +85,18 @@ class OrderRepositoryPostgres extends OrderRepository {
     await t.commit()
   }
 
+  async editOrderStatus (id, editOrderStatusPayload) {
+    const { isPaid } = editOrderStatusPayload
+
+    const updatedOrder = await this._order.update({
+      isPaid
+    }, { where: { id } })
+
+    if (updatedOrder[0] === 0) {
+      throw new NotFoundError('Order gagal diperbarui, Id tidak ditemukan')
+    }
+  }
+
   async countOrders () {
     const count = this._order.count()
 

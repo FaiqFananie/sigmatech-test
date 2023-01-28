@@ -26,7 +26,9 @@ DomainErrorTranslator._directories = {
   'ORDER_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('properti yang dibutuhkan belum cukup'),
   'ORDER_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai'),
   'EDIT_ORDER_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('properti yang dibutuhkan belum cukup'),
-  'EDIT_ORDER_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai')
+  'EDIT_ORDER_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai'),
+  'EDIT_ORDER_STATUS_PAYLOAD.NOT_CONTAIN_NEEDED_PROPERTY': new InvariantError('properti yang dibutuhkan belum cukup'),
+  'EDIT_ORDER_STATUS_PAYLOAD.NOT_MEET_DATA_TYPE_SPECIFICATION': new InvariantError('tipe data tidak sesuai')
 
 }
 

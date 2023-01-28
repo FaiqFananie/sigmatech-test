@@ -10,6 +10,7 @@ describe('/orders endpoint', () => {
   let server
   let accessToken
   let accessToken2
+  let accessToken3
   let response1
   beforeAll(async () => {
     server = createServer(container)
@@ -27,6 +28,13 @@ describe('/orders endpoint', () => {
       role: 'admin'
     })
 
+    await test(server).post('/users').send({
+      username: 'faiqfananie5',
+      password: 'secret5',
+      fullname: 'Faiq Fananie',
+      role: 'kasir'
+    })
+
     const loginResponse = await test(server).post('/login').send({
       username: 'faiqfananie3',
       password: 'secret3'
@@ -37,8 +45,14 @@ describe('/orders endpoint', () => {
       password: 'secret4'
     })
 
+    const loginResponse3 = await test(server).post('/login').send({
+      username: 'faiqfananie5',
+      password: 'secret5'
+    })
+
     accessToken = loginResponse.body.data.accessToken
     accessToken2 = loginResponse2.body.data.accessToken
+    accessToken3 = loginResponse3.body.data.accessToken
   })
 
   afterEach(async () => {
@@ -238,7 +252,7 @@ describe('/orders endpoint', () => {
   })
 
   describe('when PUT /orders/:id', () => {
-    it('should return status 404 when menu is not found', async () => {
+    it('should return status 404 when order is not found', async () => {
       // Arrange
       const requestPayload = {
         tableNumber: 1
@@ -325,6 +339,84 @@ describe('/orders endpoint', () => {
 
       // Action
       const response = await test(server).put('/orders/order-123').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.message).toEqual('Order berhasil diperbarui')
+    })
+  })
+
+  describe('when PUT /orders/:id/status', () => {
+    it('should return status 404 when order is not found', async () => {
+      // Arrange
+      const requestPayload = {
+        isPaid: true
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123/status').send(requestPayload).set('Authorization', `Bearer ${accessToken3}`)
+
+      // Assert
+      expect(response.status).toEqual(404)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Order gagal diperbarui, Id tidak ditemukan')
+    })
+
+    it('should return status 400 when request payload not contain needed property', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).put('/orders/order-123/status').set('Authorization', `Bearer ${accessToken3}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('properti yang dibutuhkan belum cukup')
+    })
+
+    it('should return status 400 when request payload not meet data type specification', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        isPaid: []
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123/status').send(requestPayload).set('Authorization', `Bearer ${accessToken3}`)
+
+      // Assert
+      expect(response.status).toEqual(400)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('tipe data tidak sesuai')
+    })
+
+    it('should return status 403 when user has no access', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        isPaid: true
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123/status').send(requestPayload).set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(403)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+    })
+
+    it('should update order when order is found', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const requestPayload = {
+        isPaid: true
+      }
+
+      // Action
+      const response = await test(server).put('/orders/order-123/status').send(requestPayload).set('Authorization', `Bearer ${accessToken3}`)
 
       // Assert
       expect(response.status).toEqual(200)

@@ -5,6 +5,7 @@ const MenusTableTestHelper = require('../../../tests/MenusTableTestHelper')
 const OrderMenusTableTestHelper = require('../../../tests/OrderMenusTableTestHelper')
 const OrdersTableTestHelper = require('../../../tests/OrdersTableTestHelper')
 const OrderRepositoryPostgres = require('../OrderRepositoryPostgres')
+const EditOrderStatusPayload = require('../../../Domains/orders/Entities/EditOrderStatusPayload')
 
 describe('OrderRepositoryPostgres', () => {
   afterEach(async () => {
@@ -206,6 +207,37 @@ describe('OrderRepositoryPostgres', () => {
 
       // Action & Assert
       await expect(orderRepositoryPostgres.editOrder('order-123', orderPayload)).rejects.toThrowError(NotFoundError)
+    })
+  })
+
+  describe('editOrderStatus function', () => {
+    it('should update order correctly', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const editOrderStatusPayload = new EditOrderStatusPayload({
+        isPaid: true
+      })
+
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action
+      await orderRepositoryPostgres.editOrderStatus('order-123', editOrderStatusPayload)
+
+      // Assert
+      const order = await OrdersTableTestHelper.findOrdersById('order-123')
+      expect(order.isPaid).toEqual(editOrderStatusPayload.isPaid)
+    })
+
+    it('should throw NotFound Error when order is not found', async () => {
+      // Arrange
+      const editOrderStatusPayload = new EditOrderStatusPayload({
+        isPaid: true
+      })
+
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.editOrderStatus('order-999', editOrderStatusPayload)).rejects.toThrowError(NotFoundError)
     })
   })
 })

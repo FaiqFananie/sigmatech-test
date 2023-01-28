@@ -35,6 +35,7 @@ const AddOrderUseCase = require('../Applications/use_case/AddOrderUseCase')
 const GetOrderUseCase = require('../Applications/use_case/GetOrderUseCase')
 const GetAllOrderUseCase = require('../Applications/use_case/GetAllOrderUseCase')
 const EditOrderUseCase = require('../Applications/use_case/EditOrderUseCase')
+const EditStatusOrderUseCase = require('../Applications/use_case/EditStatusOrderUseCase')
 
 // creating container
 const container = createContainer()
@@ -347,6 +348,19 @@ container.register([
         {
           name: 'menuRepository',
           internal: MenuRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: EditStatusOrderUseCase.name,
+    Class: EditStatusOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
         }
       ]
     }
