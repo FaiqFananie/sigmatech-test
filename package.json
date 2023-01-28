@@ -9,7 +9,8 @@
     "test": "jest --setupFiles dotenv/config -i",
     "test:watch:change": "jest --watch --setupFiles dotenv/config -i",
     "test:watch": "jest --watchAll --coverage --setupFiles dotenv/config -i",
-    "migrate": "npx sequelize-cli db:migrate"
+    "migrate": "npx sequelize-cli db:migrate",
+    "eslint": "npx eslint"
   },
   "author": "",
   "license": "ISC",

@@ -3,3 +3,5 @@ package-lock.json
 coverage
 .env
 logs
+config/config.json
+
