@@ -150,18 +150,18 @@ describe('MenuRepositoryPostgres', () => {
       expect(typeof menu).toEqual('object')
       expect(menu.length).toEqual(1)
     })
-  })
 
-  it('should return empty array =', async () => {
-    // Arrange
-    const menuRepositoryPostgres = new MenuRepositoryPostgres(Menu, {})
+    it('should return empty array =', async () => {
+      // Arrange
+      const menuRepositoryPostgres = new MenuRepositoryPostgres(Menu, {})
 
-    // Action
-    const menu = await menuRepositoryPostgres.getMenus()
+      // Action
+      const menu = await menuRepositoryPostgres.getMenus()
 
-    // Assert
-    expect(typeof menu).toEqual('object')
-    expect(menu.length).toEqual(0)
+      // Assert
+      expect(typeof menu).toEqual('object')
+      expect(menu.length).toEqual(0)
+    })
   })
 
   describe('deleteMenu function', () => {
@@ -173,13 +173,13 @@ describe('MenuRepositoryPostgres', () => {
       // Action & Assert
       await expect(menuRepositoryPostgres.deleteMenu('menu-123')).resolves.not.toThrowError(NotFoundError)
     })
-  })
 
-  it('should throw NotFoundError when menu is not found =', async () => {
-    // Arrange
-    const menuRepositoryPostgres = new MenuRepositoryPostgres(Menu, {})
+    it('should throw NotFoundError when menu is not found =', async () => {
+      // Arrange
+      const menuRepositoryPostgres = new MenuRepositoryPostgres(Menu, {})
 
-    // Action & Assert
-    await expect(menuRepositoryPostgres.deleteMenu('menu-999')).rejects.toThrowError(NotFoundError)
+      // Action & Assert
+      await expect(menuRepositoryPostgres.deleteMenu('menu-999')).rejects.toThrowError(NotFoundError)
+    })
   })
 })

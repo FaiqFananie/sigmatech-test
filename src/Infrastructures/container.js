@@ -20,7 +20,7 @@ const RefreshAuthenticationUseCase = require('../Applications/use_case/RefreshAu
 const LogoutUserUseCase = require('../Applications/use_case/LogoutUserUseCase')
 const MenuRepository = require('../Domains/menus/MenuRepository')
 const MenuRepositoryPostgres = require('./repository/MenuRepositoryPostgres')
-const { Menu, Order } = require('../../models/menu_order')
+const { Menu, Order, OrderMenu } = require('../../models/menu_order')
 const AddMenuUseCase = require('../Applications/use_case/AddMenuUseCase')
 const CheckAuthenticationUseCase = require('../Applications/use_case/CheckAuthenticationUseCase')
 const Logger = require('../Applications/debug/Logger')
@@ -36,6 +36,9 @@ const GetOrderUseCase = require('../Applications/use_case/GetOrderUseCase')
 const GetAllOrderUseCase = require('../Applications/use_case/GetAllOrderUseCase')
 const EditOrderUseCase = require('../Applications/use_case/EditOrderUseCase')
 const EditStatusOrderUseCase = require('../Applications/use_case/EditStatusOrderUseCase')
+const OrderMenuRepository = require('../Domains/order_menus/OrderMenuRepository')
+const OrderMenuRepositoryPostgres = require('./repository/OrderMenuRepositoryPostgres')
+const DeleteOrderUseCase = require('../Applications/use_case/DeleteOrderUseCase')
 
 // creating container
 const container = createContainer()
@@ -93,6 +96,17 @@ container.register([
         {
           name: 'menu',
           concrete: Menu
+        }
+      ]
+    }
+  },
+  {
+    key: OrderMenuRepository.name,
+    Class: OrderMenuRepositoryPostgres,
+    parameter: {
+      dependencies: [
+        {
+          concrete: OrderMenu
         }
       ]
     }
@@ -361,6 +375,23 @@ container.register([
         {
           name: 'orderRepository',
           internal: OrderRepository.name
+        }
+      ]
+    }
+  },
+  {
+    key: DeleteOrderUseCase.name,
+    Class: DeleteOrderUseCase,
+    parameter: {
+      injectType: 'destructuring',
+      dependencies: [
+        {
+          name: 'orderRepository',
+          internal: OrderRepository.name
+        },
+        {
+          name: 'orderMenuRepository',
+          internal: OrderMenuRepository.name
         }
       ]
     }

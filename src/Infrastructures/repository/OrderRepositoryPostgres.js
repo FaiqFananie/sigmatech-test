@@ -97,6 +97,14 @@ class OrderRepositoryPostgres extends OrderRepository {
     }
   }
 
+  async deleteOrder (id) {
+    const deletedOrder = await this._order.destroy({ where: { id } })
+
+    if (deletedOrder === 0) {
+      throw new NotFoundError('Order gagal dihapus, Id tidak ditemukan')
+    }
+  }
+
   async countOrders () {
     const count = this._order.count()
 

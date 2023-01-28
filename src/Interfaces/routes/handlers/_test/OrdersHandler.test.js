@@ -424,4 +424,42 @@ describe('/orders endpoint', () => {
       expect(response.body.message).toEqual('Order berhasil diperbarui')
     })
   })
+
+  describe('when DELETE /orders/:id', () => {
+    it('should return status 404 when order is not found', async () => {
+      // Arrange & Action
+      const response = await test(server).delete('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(404)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Order gagal dihapus, Id tidak ditemukan')
+    })
+
+    it('should return status 403 when user has no access', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).delete('/orders/order-123').set('Authorization', `Bearer ${accessToken2}`)
+
+      // Assert
+      expect(response.status).toEqual(403)
+      expect(response.body.status).toEqual('fail')
+      expect(response.body.message).toEqual('Anda tidak punya akses untuk aksi ini')
+    })
+
+    it('should return status 200 when all condition fulfilled', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+
+      // Action
+      const response = await test(server).delete('/orders/order-123').set('Authorization', `Bearer ${accessToken}`)
+
+      // Assert
+      expect(response.status).toEqual(200)
+      expect(response.body.status).toEqual('success')
+      expect(response.body.message).toEqual('Order berhasil dihapus')
+    })
+  })
 })

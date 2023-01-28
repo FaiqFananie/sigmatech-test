@@ -34,6 +34,7 @@ const routes = (app, container, middleware) => {
   app.get('/orders', middleware.checkAuth, ordersHandler.getAllOrderHandler)
   app.put('/orders/:id', middleware.checkAuth, ordersHandler.putOrderHandler)
   app.put('/orders/:id/status', middleware.checkAuth, ordersHandler.putOrderStatusHandler)
+  app.delete('/orders/:id', middleware.checkAuth, ordersHandler.deleteOrderHandler)
 }
 
 module.exports = routes

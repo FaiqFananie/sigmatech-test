@@ -4,6 +4,7 @@ const GetOrderUseCase = require('../../../Applications/use_case/GetOrderUseCase'
 const GetAllOrderUseCase = require('../../../Applications/use_case/GetAllOrderUseCase')
 const EditOrderUseCase = require('../../../Applications/use_case/EditOrderUseCase')
 const EditStatusOrderUseCase = require('../../../Applications/use_case/EditStatusOrderUseCase')
+const DeleteOrderUseCase = require('../../../Applications/use_case/DeleteOrderUseCase')
 
 class Ordershandler {
   constructor (container) {
@@ -14,6 +15,7 @@ class Ordershandler {
     this.getAllOrderHandler = this.getAllOrderHandler.bind(this)
     this.putOrderHandler = this.putOrderHandler.bind(this)
     this.putOrderStatusHandler = this.putOrderStatusHandler.bind(this)
+    this.deleteOrderHandler = this.deleteOrderHandler.bind(this)
   }
 
   async postOrderHandler (req, res, next) {
@@ -106,6 +108,25 @@ class Ordershandler {
       return res.status(200).json({
         status: 'success',
         message: 'Order berhasil diperbarui'
+      })
+    } catch (err) {
+      next(err)
+    }
+  }
+
+  async deleteOrderHandler (req, res, next) {
+    try {
+      if (res.locals.user.role !== 'pelayan' && res.locals.user.role !== 'kasir') {
+        throw new AuthorizationError('Anda tidak punya akses untuk aksi ini')
+      }
+
+      const { id } = req.params
+      const deleteOrderUseCase = this._container.getInstance(DeleteOrderUseCase.name)
+      await deleteOrderUseCase.execute(id)
+
+      return res.status(200).json({
+        status: 'success',
+        message: 'Order berhasil dihapus'
       })
     } catch (err) {
       next(err)

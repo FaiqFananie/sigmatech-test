@@ -240,4 +240,23 @@ describe('OrderRepositoryPostgres', () => {
       await expect(orderRepositoryPostgres.editOrderStatus('order-999', editOrderStatusPayload)).rejects.toThrowError(NotFoundError)
     })
   })
+
+  describe('deleteOrder function', () => {
+    it('should delete order correctly', async () => {
+      // Arrange
+      await OrdersTableTestHelper.addOrder({ id: 'order-123' })
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.deleteOrder('order-123')).resolves.not.toThrowError(NotFoundError)
+    })
+
+    it('should throw NotFoundError when order is not found =', async () => {
+      // Arrange
+      const orderRepositoryPostgres = new OrderRepositoryPostgres(Order)
+
+      // Action & Assert
+      await expect(orderRepositoryPostgres.deleteOrder('order-999')).rejects.toThrowError(NotFoundError)
+    })
+  })
 })
